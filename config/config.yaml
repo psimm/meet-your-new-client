@@ -1,0 +1,111 @@
+defaults:
+  # Use a registered schema
+  - config_schema
+  # Override defaults of the registered schema with values from this file
+  - _self_
+  - override hydra/sweeper: list
+
+paths:
+  # Inputs: from runtime directory
+  reports_dir: ${hydra:runtime.cwd}/data/reports
+  questions_file: ${hydra:runtime.cwd}/data/questions/questions.json
+  # Cache: Where the converted files are stored to be reused across runs
+  cache_dir: ${hydra:runtime.cwd}/cache
+
+  # Outputs: from run directory
+  markdown_dir: ${hydra:runtime.output_dir}/markdown
+  answers_file: ${hydra:runtime.output_dir}/answers.json
+  evaluated_answers_file: ${hydra:runtime.output_dir}/evaluated_answers.json
+
+convert:
+  model: gpt-4.1-mini-2025-04-14
+  lib: markitdown
+  img_prompt: Describe the image in detail. Extract numbers, text and everything else required to answer questions about it. Do not use line breaks or other formatting.
+  temperature: 0.0
+
+  # Running parameters
+  read_cache: true
+  write_cache: true
+  retry_cached_failures: false
+
+  # File selection
+  # optionally, only convert files with this suffix
+  suffix:
+  # optionally, only work on the first n files
+  sample_first_n:
+  # optionally, specify the exact files to convert from the reports_dir
+  # e.g. "- my_document.pptx"
+  # if not specified, all files in the reports_dir will be converted
+  target_files:
+
+answer:
+  model: qwen2p5-vl-32b-instruct
+  temperature: 0.0
+  prompt: |
+    You are a helpful assistant that answers questions based on provided context.
+
+    CONTEXT:
+    {report_content}
+
+    QUESTION:
+    {question}
+
+    Answer the question based solely on the provided context. If the information isn't available in the context, say "I don't have enough information to answer this question."
+
+judge:
+  model: o4-mini-2025-04-16
+  prompt: |
+    You are the judge for an AI system evaluation.
+
+    The AI was asked a question and provided an answer.
+    Your task is to check whether the answer matches the ground truth.
+
+    Correct answers:
+    - Contain all information from the ground truth
+    - May contain additional information, as long as it's not contradictory
+
+    Incorrect answers:
+    - Contradict the ground truth, even in parts
+    - Lack key information of the ground truth
+    - State that the question can't be answered
+
+    QUESTION:
+    {question}
+
+    GROUND TRUTH:
+    {ground_truth}
+
+    ANSWER:
+    {answer}
+
+steps:
+  convert: true
+  answer: true
+  judge: true
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d_%H-%M-%S}_answer.model=${answer.model}_convert.lib=${convert.lib}_convert.model=${answer.model}}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.override_dirname}
+  job:
+    chdir: true
+    config:
+      override_dirname:
+        kv_sep: "="
+        item_sep: ","
+        exclude_keys: []
+  sweeper:
+    grid_params:
+      answer.model: gpt-4.1-mini-2025-04-14,qwen2p5-vl-32b-instruct,llama4-maverick-instruct-basic
+    list_params:
+      # Zerox OCR is only compatible with gpt, so the Cartesian product doesn't work
+      # Therefore the combinations are specified as a list
+      # Each position in the arguments below corresponds to one combination
+      # Organized by library first, then by model:
+      convert.lib: docling,docling,docling,markitdown,markitdown,markitdown,marker,marker,marker,zerox
+      # Zerox is only compatible with GPT
+      convert.model: gpt-4.1-mini-2025-04-14,qwen2p5-vl-32b-instruct,llama4-maverick-instruct-basic,gpt-4.1-mini-2025-04-14,qwen2p5-vl-32b-instruct,llama4-maverick-instruct-basic,gpt-4.1-mini-2025-04-14,qwen2p5-vl-32b-instruct,llama4-maverick-instruct-basic,gpt-4.1-mini-2025-04-14
+      # Zerox OCR is only compatible with .pdf files
+      convert.suffix: null,null,null,null,null,null,null,null,null,.pdf

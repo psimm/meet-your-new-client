@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Data
+data/reports/
+outputs/
+multirun/
+
+# Other
+.luarc.json
+cache/
+
+/.luarc.json

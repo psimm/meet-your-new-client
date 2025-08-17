@@ -1,0 +1,3746 @@
+[
+    {
+        "question_id": "ai_guide_1",
+        "question": "Who are the presenters mentioned in the AI guide and what are their roles?",
+        "ground_truth": "Paul Simmering (Senior Data Scientist) and Oliver Tabino (Founder and managing director)",
+        "report_name": "ai_guide",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_2",
+        "question": "When did Q Agentur für Forschung start their first AI projects?",
+        "ground_truth": "2020",
+        "report_name": "ai_guide",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_3",
+        "question": "How many categories did Q win in the Smaller Agencies - Full Service image study?",
+        "ground_truth": "9 out of 9 categories",
+        "report_name": "ai_guide",
+        "slide_number": 2,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "ai_guide_4",
+        "question": "How many case studies are presented in the AI guide?",
+        "ground_truth": "5",
+        "report_name": "ai_guide",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_5",
+        "question": "What was the tool cost for the Open Text Categorization Tool?",
+        "ground_truth": "Under 50€ for API-Use",
+        "report_name": "ai_guide",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_6",
+        "question": "What are the three cost components for the Social Media Data Pipeline?",
+        "ground_truth": "6,000€ for data, 3,000€ for Tableau, 1,000€ for API usage",
+        "report_name": "ai_guide",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_7",
+        "question": "In which project are adverse events monitored?",
+        "ground_truth": "Social Media Data Pipeline With Dashboard",
+        "report_name": "ai_guide",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_8",
+        "question": "What was the problem encountered in the AI Panel experiment?",
+        "ground_truth": "Models are assistants, not representative participants",
+        "report_name": "ai_guide",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_9",
+        "question": "What are the three different types of testing AI?",
+        "ground_truth": "Vibe Check, small test set, large benchmark",
+        "report_name": "ai_guide",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "ai_guide_10",
+        "question": "What are the consistent competitive advantages in a world of exchangeable AI models?",
+        "ground_truth": "Data, evaluation systems, app / presentation layer",
+        "report_name": "ai_guide",
+        "slide_number": 13,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "ai_guide_11",
+        "question": "What are the steps to justify complexity?",
+        "ground_truth": "Develope a simple system, demonstrate added value, increase complexity only then",
+        "report_name": "ai_guide",
+        "slide_number": 14,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "ai_guide_12",
+        "question": "Who is quoted about manual inspection of data in machine learning?",
+        "ground_truth": "Greg Brockman, President & Co-Founder of OpenAI",
+        "report_name": "ai_guide",
+        "slide_number": 15,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_13",
+        "question": "What is the quote from Greg Brockman mentioned in the presentation?",
+        "ground_truth": "Manual inspection of data has probably the highest value-to-prestige ratio of any activity in machine learning",
+        "report_name": "ai_guide",
+        "slide_number": 15,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "ai_guide_14",
+        "question": "What has to be paid from the innovation budget?",
+        "ground_truth": "AI, research question, data basis, analysis methods, reporting format, pricing",
+        "report_name": "ai_guide",
+        "slide_number": 16,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "ai_guide_15",
+        "question": "What was Steve Jobs' quote mentioned in the presentation?",
+        "ground_truth": "Real artists ship",
+        "report_name": "ai_guide",
+        "slide_number": 17,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_1",
+        "question": "Which university contributed to the research?",
+        "ground_truth": "Tel Aviv University",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 1,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_2",
+        "question": "How many Palestinians were surveyed?",
+        "ground_truth": "1270",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_3",
+        "question": "Who prepared the analysis?",
+        "ground_truth": "Dr. Khalil Shikaki, director of PSR, Dr. Dahlia Scheindlin, and Dr. Nimrod Rosler & Dr. Alon Yakter of Tel Aviv University",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_4",
+        "question": "What was the time range in which the latest wave of the survey was conducted? Give the start and end date across all respondent groups.",
+        "ground_truth": "Between 2024-07-17 and 2024-07-29",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_5",
+        "question": "Among Jewish Israelis, what's the percentage that probably or definitely think what Hamas did on Oct 7 justifies what Israel did in the Gaza Strip?",
+        "ground_truth": "84% (11% probably, 73% definitely)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 4,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_6",
+        "question": "Among all Palestinians, what's the percentage of people thinking that the number of casualties on the other side was completely justified?",
+        "ground_truth": "31%",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 5,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_7",
+        "question": "What percentage of Israeli Jews think that casualties on the other side are relatively or completely justified?",
+        "ground_truth": "76% (58% completely justified, 18% relatively justified)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 5,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_8",
+        "question": "What percentage of total Palestinian respondents have a high expectation of severe West Bank escalation?",
+        "ground_truth": "67%",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 6,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_9",
+        "question": "Among Israeli Arabs, what's the percentage of people expecting the Gaza War to expand into a regional war with the direct participation of Iran?",
+        "ground_truth": "41%",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 7,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_10",
+        "question": "Among Palestinians, what's the percentage of people that somewhat or strongly agree that international institutions are biased in favor of Western countries and the US?",
+        "ground_truth": "78% (24% somewhat, 54% strongly)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 8,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_11",
+        "question": "As of July 2024, do Palestinians or Israeli have a higher support the establishment of a Palestinian state?",
+        "ground_truth": "Palestinians have higher support, at 40% compared to 31% of Israelis",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 10,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_12",
+        "question": "As of June 2017, do Israeli Jews or Israeli Arabs have a higher support the establishment of a Palestinian state?",
+        "ground_truth": "Israeli Arabs have higher support, at 81% compared to 47% of Israeli Jews",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 11,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_13",
+        "question": "Do more Palestinians or more Israelis support the two-state solution?",
+        "ground_truth": "More Palestinians support the two-state solution",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 12,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_14",
+        "question": "How is the percentage among Jews, supporting the two-state solution?",
+        "ground_truth": "22% of Jews support the two-state solution",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 13,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_15",
+        "question": "How is the percentage among people between the ages 18 and 29, opposing the two-state solution?",
+        "ground_truth": "65% of people between the ages of 18 and 29 oppose the two-state solution.",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 14,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_16",
+        "question": "When was the support of the framework for one democratic state the highest among Palestinians?",
+        "ground_truth": "June 2017",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 15,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_17",
+        "question": "What is the percentage of Palestinians living in the West bank, supporting a specific TSS Package?",
+        "ground_truth": "29%",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 16,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_18",
+        "question": "What framework for solving the conflict do the most of Palestinians living in the Gaza Strip support?",
+        "ground_truth": "Confederation (45%)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 16,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_19",
+        "question": "When was the percentage of Palestinians, supporting one democratic state the lowest?",
+        "ground_truth": "It was the lowest in july 2018",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 16,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_20",
+        "question": "In december 2016, which framework for solving the conflict achieved the highest level of support among all Israelis?",
+        "ground_truth": "TSS",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 17,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_21",
+        "question": "What percentage of total Israelis have a high expectation of the establishment of an independent Palestinian state next to Israel in the next five years?",
+        "ground_truth": "5%",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 19,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_22",
+        "question": "Across all groups, which year were the expectations of the establishment of an independent Palestinian state next to Israel in the next five years the highest?",
+        "ground_truth": "2024",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 20,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_23",
+        "question": "Was the percentage of Israeli Jews believing, that TSS is still viable higher in december 2022 or in july 2024?",
+        "ground_truth": "It was higher in december 2022 (34%) than in july 2024 (19%)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 21,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_24",
+        "question": "Was the percentage of Israelis believing, that the new government will have capacity to reach peace agreement, if Palestinians hold elections?",
+        "ground_truth": "17%",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 22,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_25",
+        "question": "In which region is the percentage of people that prefer regional war over regional peace the highest?",
+        "ground_truth": "In the Gaza Strip (34%)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 23,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_26",
+        "question": "Among centrist Jewish Israelis, what's the percentage that probably or certainly prefer regional peace over regional war?",
+        "ground_truth": "71% (38% probably, 33% certainly)",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 24,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "palestinian_israeli_pulse_27",
+        "question": "Are attitudes generally stable or in flux?",
+        "ground_truth": "In flux",
+        "report_name": "palestinian_israeli_pulse",
+        "slide_number": 25,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "game_stop_1",
+        "question": "What are the challenges for GameStop?",
+        "ground_truth": "Crumbling physical retail, shift in industry structure, ruthless competition",
+        "report_name": "game_stop",
+        "slide_number": 2,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "game_stop_2",
+        "question": "How is the presentation structured?",
+        "ground_truth": "Analysis, Alternatives, Implementation, Conclusion",
+        "report_name": "game_stop",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "game_stop_3",
+        "question": "What's the US retail growth forecast for 2019, in percentage?",
+        "ground_truth": "3.8%",
+        "report_name": "game_stop",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "game_stop_4",
+        "question": "How did GameStop's stock price develop from 2008 to 2020?",
+        "ground_truth": "It fell from $63 in 2008 to $5 in 2020",
+        "report_name": "game_stop",
+        "slide_number": 6,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "game_stop_5",
+        "question": "What percentage of GameStop's revenue came from new video game hardware?",
+        "ground_truth": "21%",
+        "report_name": "game_stop",
+        "slide_number": 7,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "game_stop_6",
+        "question": "Is GameStop's net income positive or negative?",
+        "ground_truth": "Negative",
+        "report_name": "game_stop",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "game_stop_7",
+        "question": "What's Target's annual revenue?",
+        "ground_truth": "$75 bn",
+        "report_name": "game_stop",
+        "slide_number": 9,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "game_stop_8",
+        "question": "What are the criteria for evaluating GameStop's place in the new digital-first economy from a corporate perspective?",
+        "ground_truth": "The criteria are: strategy fit, ease of implementation and cost of implementation",
+        "report_name": "game_stop",
+        "slide_number": 13,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "game_stop_9",
+        "question": "Which company does the presentation propose selling GameStop to?",
+        "ground_truth": "Netflix",
+        "report_name": "game_stop",
+        "slide_number": 14,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "game_stop_10",
+        "question": "Which alternative is the most promising?",
+        "ground_truth": "digitalize",
+        "report_name": "game_stop",
+        "slide_number": 17,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "game_stop_11",
+        "question": "Does the report suggest to increase the number of GameStop stores?",
+        "ground_truth": "No, it suggests closing stores.",
+        "report_name": "game_stop",
+        "slide_number": 19,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "game_stop_12",
+        "question": "Who would GameStop need to hire to create a platform and mobile app?",
+        "ground_truth": "A product manager, 10 developers for the platform and 5 developers to create the app.",
+        "report_name": "game_stop",
+        "slide_number": 20,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "game_stop_13",
+        "question": "By what year should the platform be ready?",
+        "ground_truth": "2021-2022",
+        "report_name": "game_stop",
+        "slide_number": 24,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "game_stop_14",
+        "question": "What's a good mitigation strategy for the risk of delayed development?",
+        "ground_truth": "Hire more developers",
+        "report_name": "game_stop",
+        "slide_number": 25,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "game_stop_15",
+        "question": "How many risks have a medium probability?",
+        "ground_truth": "Two: retail decline faster than anticipated and new products appear",
+        "report_name": "game_stop",
+        "slide_number": 25,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "game_stop_16",
+        "question": "What is the average rent per sq ft?",
+        "ground_truth": "11.5",
+        "report_name": "game_stop",
+        "slide_number": 27,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "game_stop_17",
+        "question": "What is the required budget for change management in 2023, in millions of dollars?",
+        "ground_truth": "120",
+        "report_name": "game_stop",
+        "slide_number": 28,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "game_stop_18",
+        "question": "How high were the total costs in 2022, in millions of dollars?",
+        "ground_truth": "$4237 million",
+        "report_name": "game_stop",
+        "slide_number": 28,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "game_stop_19",
+        "question": "How high was the revenue from original business in 2021?",
+        "ground_truth": "5975 m$",
+        "report_name": "game_stop",
+        "slide_number": 29,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_1",
+        "question": "Is the report about Japanese cosmetics trends?",
+        "ground_truth": "No. Among other topics, it's about K-Beauty.",
+        "report_name": "cosmetics_trends",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_2",
+        "question": "What is the name of the AI-based social listening platform?",
+        "ground_truth": "Cosmention",
+        "report_name": "cosmetics_trends",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_3",
+        "question": "Which topics are the key insights about?",
+        "ground_truth": "Moisturizers, K-Beauty, TikTok",
+        "report_name": "cosmetics_trends",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "cosmetics_trends_4",
+        "question": "What percentage of respondents consider social media a motivator to try new products?",
+        "ground_truth": "57%",
+        "report_name": "cosmetics_trends",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_5",
+        "question": "On which place does La Roche-Posay rank in the moisturizer brands ranking?",
+        "ground_truth": "5th",
+        "report_name": "cosmetics_trends",
+        "slide_number": 6,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_6",
+        "question": "How many followers does Dr. Drey have?",
+        "ground_truth": "1.88 million",
+        "report_name": "cosmetics_trends",
+        "slide_number": 6,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_7",
+        "question": "Which product did dr.fazan recommend?",
+        "ground_truth": "Cicaplast Baume B5",
+        "report_name": "cosmetics_trends",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_8",
+        "question": "How did the Share of Voice of Strobe Cream change in the last year?",
+        "ground_truth": "-26.6%",
+        "report_name": "cosmetics_trends",
+        "slide_number": 7,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_9",
+        "question": "Are there more products with an average rating of 4.0 or 4.5?",
+        "ground_truth": "More with 4.5",
+        "report_name": "cosmetics_trends",
+        "slide_number": 8,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_10",
+        "question": "What percentage of moisturizer reviews that mention ingredients give 5 stars?",
+        "ground_truth": "67%",
+        "report_name": "cosmetics_trends",
+        "slide_number": 9,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_12",
+        "question": "Did 'Acne' or 'Sensitive Skin' get mentioned more often in moisturizer reviews?",
+        "ground_truth": "Sensitive skin was mentioned more",
+        "report_name": "cosmetics_trends",
+        "slide_number": 10,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_13",
+        "question": "Whats the second most mentioned moisturizer ingredient?",
+        "ground_truth": "Ascorbic Acid",
+        "report_name": "cosmetics_trends",
+        "slide_number": 10,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_14",
+        "question": "What's the average price of Neutrogena moisturizers?",
+        "ground_truth": "$19.8",
+        "report_name": "cosmetics_trends",
+        "slide_number": 10,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_15",
+        "question": "How many percent of moisturizers are at a monthly budget between $15.01 - $30?",
+        "ground_truth": "25%",
+        "report_name": "cosmetics_trends",
+        "slide_number": 11,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_16",
+        "question": "What was the US year over year inflation rate in July 2022?",
+        "ground_truth": "8.4%",
+        "report_name": "cosmetics_trends",
+        "slide_number": 12,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_17",
+        "question": "What fraction of cosmetics posts were related to K-Beauty?",
+        "ground_truth": "Every 60th post",
+        "report_name": "cosmetics_trends",
+        "slide_number": 14,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_18",
+        "question": "In which month did the monthly share of voice of K-beauty ingredients peak?",
+        "ground_truth": "January 2023",
+        "report_name": "cosmetics_trends",
+        "slide_number": 15,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_19",
+        "question": "In which month was the monthly share of voice of glass skin at it's highest?",
+        "ground_truth": "April 2023",
+        "report_name": "cosmetics_trends",
+        "slide_number": 16,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_20",
+        "question": "On average, how much more engagement does a TikTok post have compared to a YouTube video?",
+        "ground_truth": "More than 10x. Reasoning: They get roughly 5x more engagement than Instagram, which itself gets more than 2x more engagement than YouTube.",
+        "report_name": "cosmetics_trends",
+        "slide_number": 18,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_21",
+        "question": "What do the brands Huda Beauty, Fenty Beauty, and Kylie Cosmetics have in common?",
+        "ground_truth": "They are owned by stars",
+        "report_name": "cosmetics_trends",
+        "slide_number": 19,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_22",
+        "question": "How many likes do the TikToks covered in the report have?",
+        "ground_truth": "3.3M and 3.8M",
+        "report_name": "cosmetics_trends",
+        "slide_number": 19,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "cosmetics_trends_23",
+        "question": "From what time frame did the social media posts for the report come?",
+        "ground_truth": "2021-04-20 to 2023-04-20",
+        "report_name": "cosmetics_trends",
+        "slide_number": 20,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_24",
+        "question": "Where does the review and price data come from?",
+        "ground_truth": "Google Shopping",
+        "report_name": "cosmetics_trends",
+        "slide_number": 20,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "cosmetics_trends_25",
+        "question": "What does Cosmention's AI automatically follow?",
+        "ground_truth": "relevant users and relevant hashtags",
+        "report_name": "cosmetics_trends",
+        "slide_number": 20,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "cosmetics_trends_26",
+        "question": "Who presents cosmention in the Video mentioned in the report?",
+        "ground_truth": "Paul Simmering",
+        "report_name": "cosmetics_trends",
+        "slide_number": 21,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_1",
+        "question": "When was the Sun & Tan report published?",
+        "ground_truth": "August 2022",
+        "report_name": "sun_and_tan",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "sun_and_tan_2",
+        "question": "What engagement score does the post about Salted Caramel Face Tanning Drops have?",
+        "ground_truth": "1134",
+        "report_name": "sun_and_tan",
+        "slide_number": 5,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_3",
+        "question": "How long does it take to set up filters in a ranking?",
+        "ground_truth": "2 minutes",
+        "report_name": "sun_and_tan",
+        "slide_number": 6,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "sun_and_tan_4",
+        "question": "Which product has the lowest Share of Voice average in the last 3 months?",
+        "ground_truth": "Mineral Sunscreen SPF 50",
+        "report_name": "sun_and_tan",
+        "slide_number": 6,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_5",
+        "question": "Which ingredient has the highest share of voice average in the last 3 months?",
+        "ground_truth": "hyaluronic acid",
+        "report_name": "sun_and_tan",
+        "slide_number": 7,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_6",
+        "question": "What's the email to contact to learn more?",
+        "ground_truth": "info@teamq.de",
+        "report_name": "sun_and_tan",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "sun_and_tan_7",
+        "question": "How many unique authors mentioned Glowscreen SPF 40 by Supergoop?",
+        "ground_truth": "80",
+        "report_name": "sun_and_tan",
+        "slide_number": 8,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_8",
+        "question": "How is the Weightless Face SPF 30 Sunscreen Lotion by Hawaiian Tropic rated compared to the other products in it's category?",
+        "ground_truth": "Better than 69%",
+        "report_name": "sun_and_tan",
+        "slide_number": 10,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_9",
+        "question": "What is the primary language in which the mentions of 'suncare are collected?",
+        "ground_truth": "English",
+        "report_name": "sun_and_tan",
+        "slide_number": 11,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_10",
+        "question": "Does #suncare get more mentions on YouTube or Twitter?",
+        "ground_truth": "Twitter",
+        "report_name": "sun_and_tan",
+        "slide_number": 12,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_11",
+        "question": "How many ingredients are tracked in Cosmention?",
+        "ground_truth": "2k",
+        "report_name": "sun_and_tan",
+        "slide_number": 14,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "sun_and_tan_12",
+        "question": "Does Cosmention track more Nail or Hair products?",
+        "ground_truth": "Hair",
+        "report_name": "sun_and_tan",
+        "slide_number": 14,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "machine_learning_q_1",
+        "question": "What is Larry Tesler's quote mentioned in the presentation?",
+        "ground_truth": "Intelligence is whatever machines haven't done yet",
+        "report_name": "machine_learning_q",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "machine_learning_q_2",
+        "question": "What is called AI right now?",
+        "ground_truth": "artificial intelligence, machine learning, deep learning",
+        "report_name": "machine_learning_q",
+        "slide_number": 4,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "machine_learning_q_3",
+        "question": "What are the inputs of neural networks?",
+        "ground_truth": "numbers, classes, images and text",
+        "report_name": "machine_learning_q",
+        "slide_number": 7,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "machine_learning_q_4",
+        "question": "How does an untrained model become a general model?",
+        "ground_truth": "through training with a large amount of general data",
+        "report_name": "machine_learning_q",
+        "slide_number": 9,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "machine_learning_q_6",
+        "question": "Who said you shall know a word by the company it keeps?",
+        "ground_truth": "John Rupert Firth",
+        "report_name": "machine_learning_q",
+        "slide_number": 11,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "machine_learning_q_7",
+        "question": "What are the components of the tradeoff between linear regression and neural network?",
+        "ground_truth": "learning capacity, predictive accuracy, interpretability, training speed",
+        "report_name": "machine_learning_q",
+        "slide_number": 12,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "machine_learning_q_8",
+        "question": "What are the three types of machine learning mentioned in the report?",
+        "ground_truth": "supervised learning, unsupervised learning, reinforcement learning",
+        "report_name": "machine_learning_q",
+        "slide_number": 13,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "machine_learning_q_9",
+        "question": "What does trend navigator provide?",
+        "ground_truth": "Trend Navigator provides an always up-to-date market overview, powered by ML",
+        "report_name": "machine_learning_q",
+        "slide_number": 14,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "machine_learning_q_10",
+        "question": "What is the product and trend information extracted from the social media post example ?",
+        "ground_truth": "product: Soleil Eye Color Quads, trend: silvery smokey tones",
+        "report_name": "machine_learning_q",
+        "slide_number": 16,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "machine_learning_q_11",
+        "question": "What is the positive example in the lexicon approach to sentiment analysis?",
+        "ground_truth": "abundant",
+        "report_name": "machine_learning_q",
+        "slide_number": 19,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "q_llms_roche_1",
+        "question": "What hashtag uses Q?",
+        "ground_truth": "# in research we trust",
+        "report_name": "q_llms_roche",
+        "slide_number": 2,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "q_llms_roche_2",
+        "question": "How much experience does Q have in qualitative market research?",
+        "ground_truth": "16 years",
+        "report_name": "q_llms_roche",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "q_llms_roche_3",
+        "question": "What are the fields in which q has pharma experience?",
+        "ground_truth": "Social media & netnography, co. labs & advisory boards, qualitative methods, data pipelines & ai",
+        "report_name": "q_llms_roche",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "q_llms_roche_4",
+        "question": "What are past AI and text analysis related projects for Roche?",
+        "ground_truth": "Autism textmining, IBD textmining, Lung cancer AI-powered pipeline",
+        "report_name": "q_llms_roche",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "q_llms_roche_5",
+        "question": "What are the factors, that made AI become more useful?",
+        "ground_truth": "better base models, training is optional, prompt engineering, multimodal models",
+        "report_name": "q_llms_roche",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "q_llms_roche_6",
+        "question": "Is GPT-2-XL or Claude 3 Opus better at multi-task language understanding?",
+        "ground_truth": "Claude 3 Opus is better (88%) than GPT-2-XL (34%)",
+        "report_name": "q_llms_roche",
+        "slide_number": 4,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "q_llms_roche_7",
+        "question": "Which mentions are collected in the interactive tableau dashboard in Roche's BI?",
+        "ground_truth": "drug mentions, company mentions and topic mentions",
+        "report_name": "q_llms_roche",
+        "slide_number": 7,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "q_llms_roche_8",
+        "question": "What format does the output of the flexible text analysis via prompt have?",
+        "ground_truth": "JSON",
+        "report_name": "q_llms_roche",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "q_llms_roche_9",
+        "question": "How many podcasts were analyzed in the example for a podcast analysis?",
+        "ground_truth": "83",
+        "report_name": "q_llms_roche",
+        "slide_number": 13,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "q_llms_roche_10",
+        "question": "What is the prompt used in the example for code generation with github copilot?",
+        "ground_truth": "the prompt is: Write a unit test for this function",
+        "report_name": "q_llms_roche",
+        "slide_number": 19,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "q_llms_roche_11",
+        "question": "What is the purpose of the method prompt engineering?",
+        "ground_truth": "define task and approach, give examples",
+        "report_name": "q_llms_roche",
+        "slide_number": 24,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "q_llms_roche_12",
+        "question": "What is the base of the pyramid to why measurement builds trust?",
+        "ground_truth": "data correctness, freshness and completeness tests",
+        "report_name": "q_llms_roche",
+        "slide_number": 25,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_1",
+        "question": "From which year is the presentation?",
+        "ground_truth": "2024",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_2",
+        "question": "Which different forms of NLP are compared?",
+        "ground_truth": "extractive NLP vs. generative NLP",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_3",
+        "question": "What are the costs with OpenAI for social media monitoring?",
+        "ground_truth": "~$400",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_4",
+        "question": "Which step in the distillation prcess is optional?",
+        "ground_truth": "human check",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 12,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_5",
+        "question": "Which tool offers prompt engineering, LLM or BERT-like model?",
+        "ground_truth": "LLM",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 13,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_6",
+        "question": "Which aspect is high at LLM but low at BERT-like model?",
+        "ground_truth": "schema flexibility",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 13,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_7",
+        "question": "What is the oldest dataset used for the benchmark?",
+        "ground_truth": "ConLL 2003 (Sang et al. 2003)",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 16,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_huoviala_llms_8",
+        "question": "Which dataset was used in the benchmark for the sentiment analysis?",
+        "ground_truth": "SST 2 (Socher et al. 2013)",
+        "report_name": "simmering_huoviala_llms",
+        "slide_number": 16,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_1",
+        "question": "What rating did the review example mentioned in the report have?",
+        "ground_truth": "3 out of 5 stars",
+        "report_name": "simmering_llms",
+        "slide_number": 2,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "simmering_llms_2",
+        "question": "What are the sources of information for a large language model?",
+        "ground_truth": "Internet text, books, papers, code",
+        "report_name": "simmering_llms",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "simmering_llms_3",
+        "question": "How much input is used by to develope a general task solver?",
+        "ground_truth": "more than 3B pages",
+        "report_name": "simmering_llms",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "simmering_llms_4",
+        "question": "What is the content of the input text in the experiment setup?",
+        "ground_truth": "The sound drivers are buggy",
+        "report_name": "simmering_llms",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_5",
+        "question": "How many variants of task descriptions are there in the experiment setup?",
+        "ground_truth": "9",
+        "report_name": "simmering_llms",
+        "slide_number": 5,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_6",
+        "question": "How many tokens does roleplay have in the prompt comparison?",
+        "ground_truth": "84",
+        "report_name": "simmering_llms",
+        "slide_number": 7,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_7",
+        "question": "What prompt is best in the prompt comparison with gpt-3.5?",
+        "ground_truth": "Guidlines summary",
+        "report_name": "simmering_llms",
+        "slide_number": 7,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_8",
+        "question": "What F1 score does gpt-3.5-turbo have at 4 training examples?",
+        "ground_truth": "65.1",
+        "report_name": "simmering_llms",
+        "slide_number": 8,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "simmering_llms_10",
+        "question": "Which error type occurs most often?",
+        "ground_truth": "Predicting aspect not in gold aspects",
+        "report_name": "simmering_llms",
+        "slide_number": 10,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_11",
+        "question": "What is the percentage of wrong polarity errors?",
+        "ground_truth": "24%",
+        "report_name": "simmering_llms",
+        "slide_number": 10,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_12",
+        "question": "What model has the lowest cost per 1000 sentences?",
+        "ground_truth": "InstructABSA",
+        "report_name": "simmering_llms",
+        "slide_number": 11,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_13",
+        "question": "How many tokens are used by average input sentence?",
+        "ground_truth": "17",
+        "report_name": "simmering_llms",
+        "slide_number": 11,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "simmering_llms_14",
+        "question": "What is the cost per 1000 sentences of GPT-4?",
+        "ground_truth": "$26.61",
+        "report_name": "simmering_llms",
+        "slide_number": 11,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_15",
+        "question": "What step is not required by LLM in comparison to specialized models?",
+        "ground_truth": "Label",
+        "report_name": "simmering_llms",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "simmering_llms_16",
+        "question": "What is the link to the company's website?",
+        "ground_truth": "https://teamq.de",
+        "report_name": "simmering_llms",
+        "slide_number": 13,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "stakex_cms_1",
+        "question": "Who are the authors of the presentation?",
+        "ground_truth": "Thomas Perry, Paul Simmering",
+        "report_name": "stakex_cms",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "stakex_cms_2",
+        "question": "What sources are explicitly not used?",
+        "ground_truth": "LinkedIn and other social media, Anything that requires logging in",
+        "report_name": "stakex_cms",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "stakex_cms_3",
+        "question": "How many seed stakeholders are in the project example regional stakeholder network?",
+        "ground_truth": "140",
+        "report_name": "stakex_cms",
+        "slide_number": 6,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "stakex_cms_4",
+        "question": "What steps are taken to improve stakeholder understanding and communication?",
+        "ground_truth": "identify stakeholder groups, assess stakeholder interests, identify key multipliers, target communication and content",
+        "report_name": "stakex_cms",
+        "slide_number": 9,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "stakex_cms_5",
+        "question": "What follows from the fact that affiliations change over time?",
+        "ground_truth": "networks need to be refreshed from time to time",
+        "report_name": "stakex_cms",
+        "slide_number": 10,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "healthcare_market_1",
+        "question": "What is a market?",
+        "ground_truth": "A market is an arrangement between buyers and sellers to exchange goods or services for money",
+        "report_name": "healthcare_market",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "healthcare_market_2",
+        "question": "What is the main theory that economics analyses markets through?",
+        "ground_truth": "price theory",
+        "report_name": "healthcare_market",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "healthcare_market_3",
+        "question": "What is the advantage of having a large number of small-sized producers?",
+        "ground_truth": "they cannot combine to influence the market price",
+        "report_name": "healthcare_market",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "healthcare_market_4",
+        "question": "What comes after the point of maximum output?",
+        "ground_truth": "negative returns",
+        "report_name": "healthcare_market",
+        "slide_number": 13,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "healthcare_market_5",
+        "question": "What marketforms are there under imperfect competition?",
+        "ground_truth": "monopolistic competition, oligopoly, duopoly",
+        "report_name": "healthcare_market",
+        "slide_number": 21,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "healthcare_market_6",
+        "question": "What number of firms and types of products lead to perfect competition?",
+        "ground_truth": "many firms and identival products",
+        "report_name": "healthcare_market",
+        "slide_number": 22,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "intro_to_graphrag_1",
+        "question": "What labels are connected to Tom Hanks?",
+        "ground_truth": "Person, Actor",
+        "report_name": "intro_to_graphrag",
+        "slide_number": 5,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "intro_to_graphrag_2",
+        "question": "When was the movie Forrest Gumo released?",
+        "ground_truth": "1994",
+        "report_name": "intro_to_graphrag",
+        "slide_number": 6,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "intro_to_graphrag_3",
+        "question": "Who directed The Devil's Advocat?",
+        "ground_truth": "Taylor Hackford",
+        "report_name": "intro_to_graphrag",
+        "slide_number": 7,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "intro_to_graphrag_4",
+        "question": "What types of information are used in the knowledge graph?",
+        "ground_truth": "classes, instances, properties, relations anf rules/comstraints",
+        "report_name": "intro_to_graphrag",
+        "slide_number": 12,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "intro_to_graphrag_5",
+        "question": "What is Neo4jGraph?",
+        "ground_truth": "database connector",
+        "report_name": "intro_to_graphrag",
+        "slide_number": 13,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "intro_to_graphrag_6",
+        "question": "What does Knowledge Graph + RAG have problems with?",
+        "ground_truth": "It often fails to provide relevant context for complex questions that may span the dataset",
+        "report_name": "intro_to_graphrag",
+        "slide_number": 16,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "public_transport_1",
+        "question": "Which forms of mobility are mentioned under new mobility?",
+        "ground_truth": "renting, leasing, bicycles, vehicles, public transport, scooters, carsharing, carpooling, taxis & CDV",
+        "report_name": "public_transport",
+        "slide_number": 3,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "public_transport_2",
+        "question": "What are the arguments why an improve of mobility is needed?",
+        "ground_truth": "Improved economic potential of the city, Improved Quality of Life, Liveable Cities",
+        "report_name": "public_transport",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "public_transport_3",
+        "question": "Which 2 factors should be managed in such a way that they balance each other out?",
+        "ground_truth": "demand,supply",
+        "report_name": "public_transport",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "public_transport_4",
+        "question": "Which are the parts of the goal framework for benchmarking?",
+        "ground_truth": "stadardized, service levels and benchmarks",
+        "report_name": "public_transport",
+        "slide_number": 5,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "public_transport_5",
+        "question": "How many indicators of benchmarking are there for pollution levels?",
+        "ground_truth": "4 indicators",
+        "report_name": "public_transport",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "public_transport_6",
+        "question": "What comes after the compilation of report card in the methodology?",
+        "ground_truth": "annual monitoring",
+        "report_name": "public_transport",
+        "slide_number": 9,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "public_transport_7",
+        "question": "What is part of the secondary data collection?",
+        "ground_truth": "Development Authorities, Municipal Corporation, STUs/SPV, RTO, Traffic Police",
+        "report_name": "public_transport",
+        "slide_number": 11,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "public_transport_8",
+        "question": "What is the percentage of Passenger count on identified routes in cities with 1-4 million population?",
+        "ground_truth": "70-80%",
+        "report_name": "public_transport",
+        "slide_number": 12,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "public_transport_9",
+        "question": "What is the source for the total population of the city?",
+        "ground_truth": "Census",
+        "report_name": "public_transport",
+        "slide_number": 17,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "public_transport_10",
+        "question": "What is the input for the Presence of Public TransportSystem in Urban Area(%)?",
+        "ground_truth": "{b/a}*100",
+        "report_name": "public_transport",
+        "slide_number": 17,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "public_transport_11",
+        "question": "On how many bus routes was the bus occupancy survey?",
+        "ground_truth": "18",
+        "report_name": "public_transport",
+        "slide_number": 20,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "public_transport_12",
+        "question": "What is the total number of buses in the city?",
+        "ground_truth": "1153(AMTS)+112(BRTS)=1265",
+        "report_name": "public_transport",
+        "slide_number": 21,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "gov_and_cit_1",
+        "question": "What forms of government are there in terms of inclusiveness?",
+        "ground_truth": "autocracy, oligarchy & democracy",
+        "report_name": "gov_and_cit",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "gov_and_cit_2",
+        "question": "What forms of government are there in terms of Recognition of Limits?",
+        "ground_truth": "Constitutional, Authoritarian & Totalitarian",
+        "report_name": "gov_and_cit",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "gov_and_cit_3",
+        "question": "What percentage did John McCain reach in the elections in 2008?",
+        "ground_truth": "28%",
+        "report_name": "gov_and_cit",
+        "slide_number": 10,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "gov_and_cit_4",
+        "question": "Who won the vote cast for President in 2012?",
+        "ground_truth": "Barack Obama",
+        "report_name": "gov_and_cit",
+        "slide_number": 11,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "gov_and_cit_5",
+        "question": "What percentage did not vote in the vote cast for President in 2016?",
+        "ground_truth": "40%",
+        "report_name": "gov_and_cit",
+        "slide_number": 12,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "gov_and_cit_6",
+        "question": "When was the highest turnout in presidential elections?",
+        "ground_truth": "2020",
+        "report_name": "gov_and_cit",
+        "slide_number": 13,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "gov_and_cit_7",
+        "question": "In which state was the 2020 votes cast as a share of the voting eligible population between 50% and 55%?",
+        "ground_truth": "Oklahoma",
+        "report_name": "gov_and_cit",
+        "slide_number": 14,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "gov_and_cit_8",
+        "question": "What is the percentage of people that say that the reason for not voting was that they did not like the candidates?",
+        "ground_truth": "20%",
+        "report_name": "gov_and_cit",
+        "slide_number": 15,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "political_parties_1",
+        "question": "What are the key topics in the presentation?",
+        "ground_truth": "definition of parties, functions of parties, major party plattforms, party identification in america, conclusion",
+        "report_name": "political_parties",
+        "slide_number": 2,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "political_parties_2",
+        "question": "What is meant by party in the electorate?",
+        "ground_truth": "Citizens who identify with the party and support its candidates",
+        "report_name": "political_parties",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "political_parties_3",
+        "question": "In what ways can candidates be nominated?",
+        "ground_truth": "Conventions & Primaries",
+        "report_name": "political_parties",
+        "slide_number": 6,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "political_parties_4",
+        "question": "Which routes are there for the nominating process?",
+        "ground_truth": "traditional rout, primary route, independent route",
+        "report_name": "political_parties",
+        "slide_number": 7,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "political_parties_5",
+        "question": "Which types of primmaries are there?",
+        "ground_truth": "closed primary, open primary",
+        "report_name": "political_parties",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "political_parties_6",
+        "question": "Why are there only two parties?",
+        "ground_truth": "Winner-take-all elections, no ideological room for more than two, there are legal barriers to third parties",
+        "report_name": "political_parties",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "political_parties_7",
+        "question": "From when to when did the Federalist Party exist?",
+        "ground_truth": "1788-1816",
+        "report_name": "political_parties",
+        "slide_number": 17,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "political_parties_8",
+        "question": "What was the share of asian people in the 2020 elections?",
+        "ground_truth": "2%",
+        "report_name": "political_parties",
+        "slide_number": 21,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "presidency_1",
+        "question": "From what does the power of the modern presidency come from?",
+        "ground_truth": "The Constitution, Laws made by Congress, Mass public opinion, Administrative strategies",
+        "report_name": "presidency",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "presidency_2",
+        "question": "What is the quote of Article II of the Constitution mentioned in the presentation?",
+        "ground_truth": "The executive Power shall be vested in a President of the United States of America",
+        "report_name": "presidency",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "presidency_3",
+        "question": "What are the constitutional powers of the presidency?",
+        "ground_truth": "expressed powers, deligated powers and inherent powers",
+        "report_name": "presidency",
+        "slide_number": 5,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "presidency_4",
+        "question": "Which president did the most executive agreements?",
+        "ground_truth": "Ronald Reagan (2840)",
+        "report_name": "presidency",
+        "slide_number": 7,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "presidency_5",
+        "question": "What is the first step in the veto process?",
+        "ground_truth": "bill passes Congress",
+        "report_name": "presidency",
+        "slide_number": 10,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "presidency_6",
+        "question": "What comes after the president in the institutional presidency?",
+        "ground_truth": "the white house staff",
+        "report_name": "presidency",
+        "slide_number": 16,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "presidency_7",
+        "question": "What were the members of the cabinet in 1789?",
+        "ground_truth": "Attorney General (Justice),Dept of War (Defense), Dept of State, Dept of Treasury",
+        "report_name": "presidency",
+        "slide_number": 17,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "presidency_8",
+        "question": "What member of the cabinet was new in 1889?",
+        "ground_truth": "Dept of Agriculture",
+        "report_name": "presidency",
+        "slide_number": 18,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "presidency_9",
+        "question": "How many members were there in the cabinet in 1977?",
+        "ground_truth": "12",
+        "report_name": "presidency",
+        "slide_number": 19,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "presidency_10",
+        "question": "What is the newest departement in the cabinet?",
+        "ground_truth": "Dept of Homeland security (2002)",
+        "report_name": "presidency",
+        "slide_number": 20,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "EMOD_1",
+        "question": "What is EMOD?",
+        "ground_truth": "EMOD is an essential tool in the eradication of Malaria and HIV.",
+        "report_name": "EMOD",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "EMOD_2",
+        "question": "What is second on the agenda?",
+        "ground_truth": "Building the EMOD Community with Slack.",
+        "report_name": "EMOD",
+        "slide_number": 5,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "EMOD_3",
+        "question": "Which programming languages are used in the EMOD Ecosystem?",
+        "ground_truth": "C++ & python",
+        "report_name": "EMOD",
+        "slide_number": 13,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "EMOD_4",
+        "question": "What is Git?",
+        "ground_truth": "Git is a distributed version control system that is widely used for tracking changes in source code (or any text-based files)",
+        "report_name": "EMOD",
+        "slide_number": 15,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "EMOD_5",
+        "question": "What does GitHup contain according to the how to contribute overview?",
+        "ground_truth": "Public EMOD repository and final updated code",
+        "report_name": "EMOD",
+        "slide_number": 18,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "EMOD_6",
+        "question": "What is the name of the set of Python scripts and utilities designed to simplify interactions with disease models for managing and executing computational experiments and simulations efficiently?",
+        "ground_truth": "IDMTools",
+        "report_name": "EMOD",
+        "slide_number": 26,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "EMOD_8",
+        "question": "What ais imported from empody.emod_task in the code?",
+        "ground_truth": "EMODTask",
+        "report_name": "EMOD",
+        "slide_number": 62,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "EMOD_9",
+        "question": "What format is the output of the malariasimulation?",
+        "ground_truth": ".csv",
+        "report_name": "EMOD",
+        "slide_number": 75,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "EMOD_10",
+        "question": "What is used to manage the whole workflow?",
+        "ground_truth": "Snakemake",
+        "report_name": "EMOD",
+        "slide_number": 98,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "EMOD_11",
+        "question": "From when is the Validation Report?",
+        "ground_truth": "11-28-2022",
+        "report_name": "EMOD",
+        "slide_number": 99,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "design_doc_1",
+        "question": "What players interact with Azure?",
+        "ground_truth": "Function Creator's Browser, Booth Tablets & LED Object",
+        "report_name": "design_doc",
+        "slide_number": 2,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "design_doc_2",
+        "question": "What button is there on the website wireframe?",
+        "ground_truth": "Submit Button",
+        "report_name": "design_doc",
+        "slide_number": 5,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "design_doc_3",
+        "question": "What is the intended use of the LED object?",
+        "ground_truth": "display animations",
+        "report_name": "design_doc",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "design_doc_4",
+        "question": "What is the task that the top piece has to fulfill in the box design?",
+        "ground_truth": "Act as a guide to keep the tubes upright and stable, plus hide electronics",
+        "report_name": "design_doc",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "design_doc_5",
+        "question": "How big is one board?",
+        "ground_truth": "2 x 30 x 30cm",
+        "report_name": "design_doc",
+        "slide_number": 10,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "design_doc_6",
+        "question": "How much do the LED Diffusers cost per unit?",
+        "ground_truth": "23.99 $",
+        "report_name": "design_doc",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "design_doc_7",
+        "question": "What is cheaper per unit, LED Strips or Splitter Boards?",
+        "ground_truth": "Splitter Boards are cheaper",
+        "report_name": "design_doc",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "bao2017_1",
+        "question": "What is the Shellcode in the control flow hijacking exploit?",
+        "ground_truth": "Malicious computatuion",
+        "report_name": "bao2017",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "bao2017_2",
+        "question": "How many new shellcodes are there in the evaluation?",
+        "ground_truth": "5",
+        "report_name": "bao2017",
+        "slide_number": 30,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "bao2017_3",
+        "question": "How long is Shellcode S3?",
+        "ground_truth": "22 Bytes",
+        "report_name": "bao2017",
+        "slide_number": 30,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "bao2017_6",
+        "question": "How many seconds does it take to generate 64 exploits?",
+        "ground_truth": "929 seconds",
+        "report_name": "bao2017",
+        "slide_number": 33,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "bao2017_7",
+        "question": "How many percent of exploits can be generated within 3 minutes?",
+        "ground_truth": "More than 70%",
+        "report_name": "bao2017",
+        "slide_number": 33,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "bao2017csf_1",
+        "question": "What does the first place at the cyber grand challenge get?",
+        "ground_truth": "$2,000,000",
+        "report_name": "bao2017csf",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "bao2017csf_2",
+        "question": "What are the two options in the action sequence?",
+        "ground_truth": "Withhold and Attack & Disclose and Patch",
+        "report_name": "bao2017csf",
+        "slide_number": 5,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "bao2017csf_3",
+        "question": "Which player has more vulnerable machines before the attack?",
+        "ground_truth": "Player 2",
+        "report_name": "bao2017csf",
+        "slide_number": 6,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "bao2017csf_4",
+        "question": "What is the Ricochet attack?",
+        "ground_truth": "Generating an exploit based in a receiving exploit",
+        "report_name": "bao2017csf",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "bao2017csf_5",
+        "question": "Which player has more vulnerable machines in the Ricochet explanation?",
+        "ground_truth": "Player 1",
+        "report_name": "bao2017csf",
+        "slide_number": 9,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "bao2017csf_6",
+        "question": "What does the work of Schramm et al. have in comparison to Cyber-hawk?",
+        "ground_truth": "Action Sequence",
+        "report_name": "bao2017csf",
+        "slide_number": 10,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "bao2017csf_7",
+        "question": "How many vulnerable machines does Player 2 have in round 3 in the case where neither player attacks?",
+        "ground_truth": "5",
+        "report_name": "bao2017csf",
+        "slide_number": 31,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "bao2017csf_8",
+        "question": "Which player has more vulnerable machines in round 7 in the case where neither player attacks?",
+        "ground_truth": "Player 1",
+        "report_name": "bao2017csf",
+        "slide_number": 31,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "bao2017csf_9",
+        "question": "Which team has the best score in the Cyber Grand Challenge?",
+        "ground_truth": "Team A",
+        "report_name": "bao2017csf",
+        "slide_number": 32,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "bao2017csf_10",
+        "question": "Which limitations of previous works is addressed?",
+        "ground_truth": "Action over time,Ricochet and Patch-based exploit generation & Uncertainty of the other player",
+        "report_name": "bao2017csf",
+        "slide_number": 33,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_sofS_1",
+        "question": "Under which conditions are improvements welcome?",
+        "ground_truth": "If you improve the template or correct the website",
+        "report_name": "02_sofS",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_sofS_2",
+        "question": "Which two types of knowledge claim are mentioned?",
+        "ground_truth": "Deductive statement and Inductive statement",
+        "report_name": "02_sofS",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_sofS_3",
+        "question": "What are the two options in the halting problem?",
+        "ground_truth": "Loop or Halt",
+        "report_name": "02_sofS",
+        "slide_number": 13,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "02_sofS_4",
+        "question": "How many classes are in the complexity zoo?",
+        "ground_truth": "277",
+        "report_name": "02_sofS",
+        "slide_number": 15,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "02_sofS_5",
+        "question": "What is required to deal with bugs after finding them?",
+        "ground_truth": "technical knowledge",
+        "report_name": "02_sofS",
+        "slide_number": 18,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "02_sofS_6",
+        "question": "When did the NSA discover the vulnerability?",
+        "ground_truth": "2012",
+        "report_name": "02_sofS",
+        "slide_number": 27,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "02_sofS_7",
+        "question": "What action happens last in the timeline of a repeated game?",
+        "ground_truth": "Player 1 attacks again",
+        "report_name": "02_sofS",
+        "slide_number": 31,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "02_sofS_8",
+        "question": "What should the worker consider to patch, according to the what to consider graphic?",
+        "ground_truth": "Poll Creator, Tester, Patcherex",
+        "report_name": "02_sofS",
+        "slide_number": 33,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "02_sofS_9",
+        "question": "What is the quote by Admiral Michael Rogers mentioned?",
+        "ground_truth": "National Security Agency discloses 91% of the zero-day vulnerabilities",
+        "report_name": "02_sofS",
+        "slide_number": 40,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_sofS_10",
+        "question": "What can be incluuded in handling and follow-on actions?",
+        "ground_truth": "Sharing, restricting or reassessing",
+        "report_name": "02_sofS",
+        "slide_number": 41,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "02_prerequisites_1",
+        "question": "When are Tiffany Bao's office hours?",
+        "ground_truth": "Thursday 9am - 10am",
+        "report_name": "02_prerequisites",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_prerequisites_2",
+        "question": "When is the first assignment due?",
+        "ground_truth": "9/2/2020 11:59pm PST",
+        "report_name": "02_prerequisites",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_prerequisites_3",
+        "question": "What is the output of the first code presented in this report?",
+        "ground_truth": "Book I's name: Harry Potter and the Philosopher's Stone",
+        "report_name": "02_prerequisites",
+        "slide_number": 7,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "02_prerequisites_4",
+        "question": "How many bits is one byte?",
+        "ground_truth": "8 bits",
+        "report_name": "02_prerequisites",
+        "slide_number": 17,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "02_prerequisites_5",
+        "question": "Which type name is biggest in 32-bit size?",
+        "ground_truth": "long long",
+        "report_name": "02_prerequisites",
+        "slide_number": 27,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "02_prerequisites_6",
+        "question": "Which type name is bigger in 64-bit size, short or int?",
+        "ground_truth": "int",
+        "report_name": "02_prerequisites",
+        "slide_number": 27,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "02_prerequisites_7",
+        "question": "What size is long in 64-bit size?",
+        "ground_truth": "8 bytes",
+        "report_name": "02_prerequisites",
+        "slide_number": 27,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "06_vulns_1",
+        "question": "What week are the slides from?",
+        "ground_truth": "Week 6",
+        "report_name": "06_vulns",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "06_vulns_2",
+        "question": "By whom is Linux/x86 - shutdown -h now - 56 bytes?",
+        "ground_truth": "Osanda Malith Jayathissa",
+        "report_name": "06_vulns",
+        "slide_number": 6,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "06_vulns_3",
+        "question": "Why are there so many kinds of shellcode?",
+        "ground_truth": "There may be special conditions on the inputs",
+        "report_name": "06_vulns",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "06_vulns_4",
+        "question": "What is the command for the security mechanism no pie?",
+        "ground_truth": "gcc -no-pie",
+        "report_name": "06_vulns",
+        "slide_number": 39,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "06_vulns_5",
+        "question": "To which security mechanism does the command gcc -z execstack belong?",
+        "ground_truth": "No W^X on Stack",
+        "report_name": "06_vulns",
+        "slide_number": 39,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "06_vulns_6",
+        "question": "What is the second step of exploitation?",
+        "ground_truth": "Overwrite a saved return address",
+        "report_name": "06_vulns",
+        "slide_number": 41,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Denes_MSc_1",
+        "question": "By whom is the report presented?",
+        "ground_truth": "Dénes CSALA",
+        "report_name": "Denes_MSc",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Denes_MSc_2",
+        "question": "What was higher in 2007, the change of system RPMs or the GDP basedon chained 2000 dollars?",
+        "ground_truth": "System RPMs",
+        "report_name": "Denes_MSc",
+        "slide_number": 4,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Denes_MSc_3",
+        "question": "What has increased more in the last 50 years, Aviation CO2 fraction or Anthropogenic CO2?",
+        "ground_truth": "Anthropogenic CO2",
+        "report_name": "Denes_MSc",
+        "slide_number": 5,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Denes_MSc_4",
+        "question": "Which aircraft developement program is the most expensive over the last years?",
+        "ground_truth": "B787",
+        "report_name": "Denes_MSc",
+        "slide_number": 6,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "Denes_MSc_5",
+        "question": "Which country has the higher GNP, Armenia or Nepal?",
+        "ground_truth": "Nepal",
+        "report_name": "Denes_MSc",
+        "slide_number": 6,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "Denes_MSc_6",
+        "question": "Which aircraft developement program has been there longer, A380 or A350?",
+        "ground_truth": "A380",
+        "report_name": "Denes_MSc",
+        "slide_number": 6,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "Denes_MSc_7",
+        "question": "What is the system level implications in the problem definition?",
+        "ground_truth": "What are the benefits (financial and environmental) of innovation for the players and the gains for the system as a whole ?",
+        "report_name": "Denes_MSc",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Denes_MSc_8",
+        "question": "What technologies can radical innovation include but is not constrained to?",
+        "ground_truth": "Propulsion, aerodynamics, structural",
+        "report_name": "Denes_MSc",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Denes_MSc_9",
+        "question": "What is the CSR + WI for TS2 - 2020?",
+        "ground_truth": "0.6448",
+        "report_name": "Denes_MSc",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Denes_MSc_10",
+        "question": "What is the highest baseline of all technology scenarios in 2030?",
+        "ground_truth": "0.7056",
+        "report_name": "Denes_MSc",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Denes_MSc_11",
+        "question": "What technilogy level has the biggest wingspan increase?",
+        "ground_truth": "Baseline",
+        "report_name": "Denes_MSc",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Denes_MSc_12",
+        "question": "What modules belong to the manufacterers class?",
+        "ground_truth": "Production Management Module & Finance Module",
+        "report_name": "Denes_MSc",
+        "slide_number": 12,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Denes_MSc_13",
+        "question": "What kind of effect is selected in the calibration?",
+        "ground_truth": "Sigmoid",
+        "report_name": "Denes_MSc",
+        "slide_number": 15,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Denes_MSc_14",
+        "question": "What was introduced first, Airbus A350 or Boeing B787?",
+        "ground_truth": "Boeing B787",
+        "report_name": "Denes_MSc",
+        "slide_number": 18,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Denes_MSc_15",
+        "question": "When was Boeing 737MAX introduced?",
+        "ground_truth": "2017",
+        "report_name": "Denes_MSc",
+        "slide_number": 18,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Denes_MSc_16",
+        "question": "How much is the average fuel-burn improvement of the Airbus A320neo over the A320?",
+        "ground_truth": "15%",
+        "report_name": "Denes_MSc",
+        "slide_number": 18,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Module02_Mig_1",
+        "question": "What comes after Containers in the journey to the cloud?",
+        "ground_truth": "PaaS",
+        "report_name": "Module02_Mig",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module02_Mig_2",
+        "question": "What are the four migration strategies?",
+        "ground_truth": "Rehost, Refractor, Rearchitect & Rebuild",
+        "report_name": "Module02_Mig",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module02_Mig_3",
+        "question": "What are pros of Lift and Shift?",
+        "ground_truth": "No re-architect or new code, Least effort for quick migration & Supported on the least common denominator",
+        "report_name": "Module02_Mig",
+        "slide_number": 5,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module02_Mig_4",
+        "question": "What versions of Debian are there as of march 2018?",
+        "ground_truth": "Debian 7.9+, 8.2+",
+        "report_name": "Module02_Mig",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Module02_Mig_5",
+        "question": "What does the Azure Data Box do?",
+        "ground_truth": "Transfer up to 100 TB of data in 7-10 days when network isn’t an efficient option",
+        "report_name": "Module02_Mig",
+        "slide_number": 14,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module02_Mig_6",
+        "question": "What are cons of cloud optimized?",
+        "ground_truth": "Containerization is an additional step",
+        "report_name": "Module02_Mig",
+        "slide_number": 18,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module02_Mig_7",
+        "question": "What option to consider to deliver new capabilities faster?",
+        "ground_truth": "PaaS Serverless",
+        "report_name": "Module02_Mig",
+        "slide_number": 21,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Module02_Mig_8",
+        "question": "What does the data layer communicate with in the logical architecture?",
+        "ground_truth": "data sources & services",
+        "report_name": "Module02_Mig",
+        "slide_number": 27,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module02_Mig_9",
+        "question": "What does the presentation layer coontain?",
+        "ground_truth": "ASP.NET Web Forms, MVC, ASP.NET Web API, WCF Services",
+        "report_name": "Module02_Mig",
+        "slide_number": 28,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module03_AC_1",
+        "question": "What does ARM use JSON for?",
+        "ground_truth": "to exchange data between a client and the ARM service",
+        "report_name": "Module03_AC",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module03_AC_2",
+        "question": "What are the names of the employees in the example for the JSON Format?",
+        "ground_truth": "John Doe, Anna Smith & Peter Jones",
+        "report_name": "Module03_AC",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module03_AC_3",
+        "question": "What files does the Azure Resource Manager template consist of?",
+        "ground_truth": "MyVnet.json & MyVnet.parameters.json",
+        "report_name": "Module03_AC",
+        "slide_number": 5,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module03_AC_4",
+        "question": "What file is opened in the example of the visual studio?",
+        "ground_truth": "azuredeploy.json",
+        "report_name": "Module03_AC",
+        "slide_number": 11,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Module03_AC_5",
+        "question": "What are the most common tools to deploy ARM templates?",
+        "ground_truth": "Visual Studio, New Azure Portal, GitHub & PowerShell",
+        "report_name": "Module03_AC",
+        "slide_number": 18,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module03_AC_6",
+        "question": "What are the dployment functions reported?",
+        "ground_truth": "deployment, parameters & variables",
+        "report_name": "Module03_AC",
+        "slide_number": 31,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Module03_AC_7",
+        "question": "What types of scripts are there in the member resources template?",
+        "ground_truth": "reusable scripts & custom scripts",
+        "report_name": "Module03_AC",
+        "slide_number": 33,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Module03_AC_8",
+        "question": "What are the DSC Components?",
+        "ground_truth": "Configuration, Resources, MOF Files, Local Configuration Manager & Optional Pull Server",
+        "report_name": "Module03_AC",
+        "slide_number": 51,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module03_AC_9",
+        "question": "How is the provider File described?",
+        "ground_truth": "Manages files and directories on target nodes",
+        "report_name": "Module03_AC",
+        "slide_number": 56,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Module03_AC_10",
+        "question": "Which provider logs configuration messages?",
+        "ground_truth": "Log",
+        "report_name": "Module03_AC",
+        "slide_number": 56,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Module04_Devops_1",
+        "question": "What percentage of development budgets for software, IT staff and external professional services will be consumed by poor requirements?",
+        "ground_truth": "41%",
+        "report_name": "Module04_Devops",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_2",
+        "question": "How many teams have adopted Agile methodologies?",
+        "ground_truth": "3 out of 4",
+        "report_name": "Module04_Devops",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_3",
+        "question": "What are outperforming teams 54% more likely to do?",
+        "ground_truth": "Collaborate existensively with their counterparts",
+        "report_name": "Module04_Devops",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_4",
+        "question": "What are the goals mentioned in the presentation?",
+        "ground_truth": "Improve Engineering Agility, Encourage Data-Driven Decision Making & Scale-up Customer Obsession",
+        "report_name": "Module04_Devops",
+        "slide_number": 5,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_5",
+        "question": "What are the Product Changes to Support DevOps?",
+        "ground_truth": "Light weight and fast install, Isolated and non-impactful, Enable Experimentation & Built-in Feedback mechanism",
+        "report_name": "Module04_Devops",
+        "slide_number": 6,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_6",
+        "question": "What was the focus on in the old world?",
+        "ground_truth": "planning",
+        "report_name": "Module04_Devops",
+        "slide_number": 8,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Module04_Devops_7",
+        "question": "What are the three conversation stages of DevOps?",
+        "ground_truth": "Culture, Process & Products",
+        "report_name": "Module04_Devops",
+        "slide_number": 9,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_8",
+        "question": "What step comes agert define in the ALM Process?",
+        "ground_truth": "Build",
+        "report_name": "Module04_Devops",
+        "slide_number": 19,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Module04_Devops_9",
+        "question": "What is meant by Backlog?",
+        "ground_truth": "How an organization defines and manages requirements and how effective they are.",
+        "report_name": "Module04_Devops",
+        "slide_number": 26,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "shot_pattern_1",
+        "question": "What does CEP stand for?",
+        "ground_truth": "Circular Error Probable",
+        "report_name": "shot_pattern",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "shot_pattern_2",
+        "question": "What is the most common CEP percentage?",
+        "ground_truth": "50%",
+        "report_name": "shot_pattern",
+        "slide_number": 7,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "shot_pattern_3",
+        "question": "What is the quote by Mark Twain mentioned in the presentation?",
+        "ground_truth": "There are lies, damned lies and statistics",
+        "report_name": "shot_pattern",
+        "slide_number": 10,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "shot_pattern_4",
+        "question": "What is the definition of a sample?",
+        "ground_truth": "A portion of the population",
+        "report_name": "shot_pattern",
+        "slide_number": 11,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "shot_pattern_5",
+        "question": "What color is the line of k=4?",
+        "ground_truth": "blue",
+        "report_name": "shot_pattern",
+        "slide_number": 24,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "shot_pattern_6",
+        "question": "What is the y impact in m for the bullet with the x impact of -0.028 m?",
+        "ground_truth": "0.021",
+        "report_name": "shot_pattern",
+        "slide_number": 25,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "shot_pattern_7",
+        "question": "What are the y impacts in cm for the bullets with the x impact of 4.50 cm?",
+        "ground_truth": "2.23 & 4.03",
+        "report_name": "shot_pattern",
+        "slide_number": 26,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "shot_pattern_8",
+        "question": "What is the command for correlation?",
+        "ground_truth": "corr",
+        "report_name": "shot_pattern",
+        "slide_number": 36,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "shot_pattern_9",
+        "question": "What does the command std stand for?",
+        "ground_truth": "Sample standard deviation",
+        "report_name": "shot_pattern",
+        "slide_number": 36,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "shot_pattern_10",
+        "question": "What does var provide?",
+        "ground_truth": "varinace",
+        "report_name": "shot_pattern",
+        "slide_number": 36,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_1",
+        "question": "What Dustin's rating?",
+        "ground_truth": "9",
+        "report_name": "database_application",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_2",
+        "question": "Who is 32 years old?",
+        "ground_truth": "Emily",
+        "report_name": "database_application",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_3",
+        "question": "Who has the higher rating, Dustin or Trevor?",
+        "ground_truth": "Dustin",
+        "report_name": "database_application",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_4",
+        "question": "What are the two main SQL integration approaches?",
+        "ground_truth": "Embed SQL in the host language (Embedded SQL, SQLJ) & Create special API to call SQL commands (JDBC)",
+        "report_name": "database_application",
+        "slide_number": 5,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "database_application_5",
+        "question": "What are the two special variables for reporting errors?",
+        "ground_truth": "SQLCODE & SQLSTATE",
+        "report_name": "database_application",
+        "slide_number": 10,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "database_application_6",
+        "question": "What is the SQL Result sorted by name in the example?",
+        "ground_truth": "Ashley, Jessica, Matthew, Michael",
+        "report_name": "database_application",
+        "slide_number": 14,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "database_application_7",
+        "question": "What does EXECUTE do in the example for a dynamic SQL?",
+        "ground_truth": "Instruct SQL system to execute the query",
+        "report_name": "database_application",
+        "slide_number": 22,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "database_application_8",
+        "question": "What does the SQL Server interact with in the JDBC architecture?",
+        "ground_truth": "JDBC Driver 1",
+        "report_name": "database_application",
+        "slide_number": 33,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "database_application_9",
+        "question": "What are the steps to submit a database query?",
+        "ground_truth": "Load the JDBC driver, Connect to the data source, Execute SQL statements",
+        "report_name": "database_application",
+        "slide_number": 41,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "database_application_10",
+        "question": "What does first() do to the cursor?",
+        "ground_truth": "moves to the first row",
+        "report_name": "database_application",
+        "slide_number": 56,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_11",
+        "question": "What mehtod moves the cursor back one row?",
+        "ground_truth": "previous()",
+        "report_name": "database_application",
+        "slide_number": 56,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_12",
+        "question": "What does getInt(int columnIndex) do?",
+        "ground_truth": "Retrieves the value of designated column in current row",
+        "report_name": "database_application",
+        "slide_number": 57,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_13",
+        "question": "What Java class is FLOAT?",
+        "ground_truth": "Double",
+        "report_name": "database_application",
+        "slide_number": 58,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_14",
+        "question": "What SQL Types are in the Java class String?",
+        "ground_truth": "CHAR & VARCHAR",
+        "report_name": "database_application",
+        "slide_number": 58,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_15",
+        "question": "What value is DATE?",
+        "ground_truth": "A day/month/year value",
+        "report_name": "database_application",
+        "slide_number": 60,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_16",
+        "question": "What SQL Data Type is a high precision numeric value?",
+        "ground_truth": "REAL",
+        "report_name": "database_application",
+        "slide_number": 60,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "database_application_17",
+        "question": "What does body-code contain?",
+        "ground_truth": "Contains code that might throw the exception",
+        "report_name": "database_application",
+        "slide_number": 67,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "data_warehousing_1",
+        "question": "What data is used in Data Warhouse and what in Database?",
+        "ground_truth": "Database: current Data, Data Warehouse: historical data",
+        "report_name": "data_warehousing",
+        "slide_number": 20,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_2",
+        "question": "What what has the higher number of records accessed Data Warhouse or Database?",
+        "ground_truth": "Data Warehouse",
+        "report_name": "data_warehousing",
+        "slide_number": 21,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_3",
+        "question": "What has a DB size of 100 MB to GB?",
+        "ground_truth": "Database",
+        "report_name": "data_warehousing",
+        "slide_number": 21,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_4",
+        "question": "What is the focus of Data Warehouse compared to Database?",
+        "ground_truth": "Database: data in; Data Warehouse: Information out",
+        "report_name": "data_warehousing",
+        "slide_number": 21,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_5",
+        "question": "What does Data Warehousing include?",
+        "ground_truth": "Build Data Warehouse, Online analysis processing(OLAP) & presentation",
+        "report_name": "data_warehousing",
+        "slide_number": 24,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "data_warehousing_6",
+        "question": "What are the tools in the Data Warehousing Architecture?",
+        "ground_truth": "Analysis. Query/Reporting & Data Mining",
+        "report_name": "data_warehousing",
+        "slide_number": 25,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "data_warehousing_7",
+        "question": "What is part of Data Pre-processing?",
+        "ground_truth": "Fill missing values & remove inconsistency",
+        "report_name": "data_warehousing",
+        "slide_number": 26,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "data_warehousing_8",
+        "question": "What concepts does dimensional modelling use?",
+        "ground_truth": "The concepts of facts (measures), and dimensions (context)",
+        "report_name": "data_warehousing",
+        "slide_number": 27,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "data_warehousing_9",
+        "question": "What are the parts of the time dimension in the star schema?",
+        "ground_truth": "Period Key, Year, Quarter & Month",
+        "report_name": "data_warehousing",
+        "slide_number": 32,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_10",
+        "question": "What dimension consists of Product Key and Product Desc?",
+        "ground_truth": "Product Dimension",
+        "report_name": "data_warehousing",
+        "slide_number": 32,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_11",
+        "question": "What are the dimensions of the SnowFlake Schema?",
+        "ground_truth": "Store Dimension, Time Dimension, City Dimension & Product Dimension",
+        "report_name": "data_warehousing",
+        "slide_number": 34,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "data_warehousing_12",
+        "question": "What Data Marts are there in the Toü-Down Approach?",
+        "ground_truth": "Sales, Purchase & Inventory",
+        "report_name": "data_warehousing",
+        "slide_number": 43,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "data_warehousing_13",
+        "question": "How many units are sold in February?",
+        "ground_truth": "41",
+        "report_name": "data_warehousing",
+        "slide_number": 51,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_14",
+        "question": "How many units of cheese are sold in January?",
+        "ground_truth": "6",
+        "report_name": "data_warehousing",
+        "slide_number": 52,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_15",
+        "question": "Which Item is sold most in March?",
+        "ground_truth": "Swiss Rolls",
+        "report_name": "data_warehousing",
+        "slide_number": 52,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "data_warehousing_16",
+        "question": "Where were more swiss rolls sold in February, Pune or Mumbai?",
+        "ground_truth": "Mumbai",
+        "report_name": "data_warehousing",
+        "slide_number": 53,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_1",
+        "question": "Who are the authors of this report?",
+        "ground_truth": "Brad Whitlock, Jean M. Favre & Jeremy S. Meredith",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2011_InSituTalk_2",
+        "question": "What machine is from 1998?",
+        "ground_truth": "ASCI Blue Pacific",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_3",
+        "question": "What machine has the longer Whole-System Checkpoint, ASCI Purple or ASCI Red Storm?",
+        "ground_truth": "ASCI Red Storm",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_4",
+        "question": "Which machine that was already built at the time of the report, has the smallest share of writable FLOPS?",
+        "ground_truth": "NCCS XT4 ",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_5",
+        "question": "Which machine that was already built at the time of the report, has the smallest share of writable FLOPS?",
+        "ground_truth": "NCCS XT4 ",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_6",
+        "question": "Which are the 3 main strategies for in situ processing?",
+        "ground_truth": "Loosely coupled, tightly coupled & hybrid ",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 5,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_7",
+        "question": "Which are the negative aspectso of the hybrid in situ strategy?",
+        "ground_truth": "It is complex & shares negative aspects of others",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 5,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_8",
+        "question": "What is the description of the tightly coupled in situ strategy?",
+        "ground_truth": "Visualization and analysis have direct access to memory of simulation code",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 5,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_9",
+        "question": "Between which parts of the loosely coupled in situ processing is a possible network boundary?",
+        "ground_truth": "Between Simulation and Memory buffer",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 6,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "2011_InSituTalk_10",
+        "question": "What should be minimised according to the design philosophy?",
+        "ground_truth": "code modifications to simulations & impact to simulation codes",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 10,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2011_InSituTalk_11",
+        "question": "What comes last bevor exiting the main loop?",
+        "ground_truth": "Check for convergence, end of loop",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 18,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "2011_InSituTalk_12",
+        "question": "In which programming languages can VisIt request data?",
+        "ground_truth": "C, C++, Fortran, Python",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 19,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2011_InSituTalk_13",
+        "question": "Which are the commands shown in the example of the simulation of updateplots on sobrio?",
+        "ground_truth": "halt, step, run & addplot",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 22,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "2011_InSituTalk_14",
+        "question": "What maximum level is set in the AMR settings in the example of the Qt Designer for custom user interfaces?",
+        "ground_truth": "1",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 23,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "2011_InSituTalk_15",
+        "question": "What is the Size of Simulation startup?",
+        "ground_truth": "8.75 Mb",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 26,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_16",
+        "question": "What is the Resident Set Size of After Libism Initialization?",
+        "ground_truth": "614 Kb",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 26,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_17",
+        "question": "How long does one In situ operation with 16M particles and 256 cores take?",
+        "ground_truth": "0.34s",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 28,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_18",
+        "question": "What is faster for 100M particles and 32 cores, I/O N files or In situ?",
+        "ground_truth": "I/O N files",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 28,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2011_InSituTalk_19",
+        "question": "How long did it take to detect the environment with 720 cores before fix?",
+        "ground_truth": "16s",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 30,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2011_InSituTalk_20",
+        "question": "Was the environment detected faster before or after the fix?",
+        "ground_truth": "after the fix",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 30,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2011_InSituTalk_21",
+        "question": "What took longer per iteration with 2112 cores, in-situ contouring or parallel disk IO?",
+        "ground_truth": "parallel disk IO",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 31,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2011_InSituTalk_22",
+        "question": "What takes the same thime per iteration, regardless of the number of cores, in-situ contouring or parallel disk IO?",
+        "ground_truth": "in-situ contouring",
+        "report_name": "2011_InSituTalk",
+        "slide_number": 31,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2011_VisIt_Update_1",
+        "question": "From when ist this report?",
+        "ground_truth": "April 27, 2011",
+        "report_name": "2011_VisIt_Update",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2011_VisIt_Update_2",
+        "question": "For when is the release of VisIt 2.3 planned?",
+        "ground_truth": "May 2011",
+        "report_name": "2011_VisIt_Update",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2011_VisIt_Update_3",
+        "question": "How many commits were there in August 2010?",
+        "ground_truth": "167",
+        "report_name": "2011_VisIt_Update",
+        "slide_number": 3,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2011_VisIt_Update_4",
+        "question": "Where ther more commits in July or December 2010?",
+        "ground_truth": "There were more commits in July 2010",
+        "report_name": "2011_VisIt_Update",
+        "slide_number": 3,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2011_VisIt_Update_5",
+        "question": "What programming language is the expression filter in, in the parallel engine?",
+        "ground_truth": "Python",
+        "report_name": "2011_VisIt_Update",
+        "slide_number": 11,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "2011_VisIt_Update_6",
+        "question": "What were the initial results used for?",
+        "ground_truth": "They were used to create a volume visualization of a 2.1 billion zone NIF calculation on 128 cores",
+        "report_name": "2011_VisIt_Update",
+        "slide_number": 20,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2012_Libsim_Update_1",
+        "question": "What is Libism?",
+        "ground_truth": "Libsim is a library that simulations may use to let VisIt connect and access their data",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2012_Libsim_Update_2",
+        "question": "What parts connect the simulation and VisIt Runtime?",
+        "ground_truth": "Libsim Front End & Adaptor",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 2,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "2012_Libsim_Update_3",
+        "question": "What is introduced for simulations in the Libism update?",
+        "ground_truth": "Custom UI",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "2012_Libsim_Update_4",
+        "question": "How many GB/sec were processed by 8192 cores?",
+        "ground_truth": "3",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2012_Libsim_Update_5",
+        "question": "What number of cores processes one GB fastest?",
+        "ground_truth": "2048",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2012_Libsim_Update_6",
+        "question": "What took longer per iteration, Parallel disk IO or in-situ, when scaling the number of cores on Cray XE6?",
+        "ground_truth": "in-situ",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 4,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2012_Libsim_Update_7",
+        "question": "How long did in-situ take per iteration with 4096 cores?",
+        "ground_truth": "9s",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 4,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2012_Libsim_Update_8",
+        "question": "How does time per iteration change with increasing number of cores for in-situ?",
+        "ground_truth": "It rises",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 4,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2012_Libsim_Update_9",
+        "question": "How does time per iteration change with increasing number cells for in-situ iso-contour + rendering?",
+        "ground_truth": "It nearly stays the same",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 5,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2012_Libsim_Update_10",
+        "question": "How long does parallel disk I/O take per itaration for 2097152 cells?",
+        "ground_truth": "2,26s",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 5,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2012_Libsim_Update_11",
+        "question": "What took longer per iteration at 10 million cells, Parallel disk IO or in-situ iso-contour + rendering?",
+        "ground_truth": "Parallel disk IO",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 5,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "2012_Libsim_Update_12",
+        "question": "How big is the file size of 64x64x64 cells?",
+        "ground_truth": "2.1 GB",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 5,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "2012_Libsim_Update_13",
+        "question": "What number of cells was processed faster per GB in the benchmark, 128x128x128 or 256x256x256?",
+        "ground_truth": "128x128x128",
+        "report_name": "2012_Libsim_Update",
+        "slide_number": 5,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2015_1",
+        "question": "When is the report from?",
+        "ground_truth": "December 16, 2015",
+        "report_name": "Waldron_2015",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2015_2",
+        "question": "What are examples for publicly available data in gene expression?",
+        "ground_truth": "GEO: Gene Expression Omnibus",
+        "report_name": "Waldron_2015",
+        "slide_number": 4,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2015_3",
+        "question": "Where there more or less than 30k data sets of GEO in 2014?",
+        "ground_truth": "There were more than 30k data sets of GEO in 2014",
+        "report_name": "Waldron_2015",
+        "slide_number": 6,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2015_4",
+        "question": "Which data set has the most patients with ovarian cancer data in the meta-analysis?",
+        "ground_truth": "TCGA",
+        "report_name": "Waldron_2015",
+        "slide_number": 10,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2015_5",
+        "question": "Which ethnic group has the highest incidence of prostate cancer?",
+        "ground_truth": "African American/Black",
+        "report_name": "Waldron_2015",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2015_6",
+        "question": "Which ethnic group has the lower number of death in prostate cancer, Asian/Pacific Islander or White?",
+        "ground_truth": "Asian/Pacific Islander",
+        "report_name": "Waldron_2015",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2015_7",
+        "question": "What is the incidence of prostate cancer among Hispanics/Latinos?",
+        "ground_truth": "140.8",
+        "report_name": "Waldron_2015",
+        "slide_number": 12,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2015_8",
+        "question": "Which gender are selected in the example of mapping obesity in the U.S.?",
+        "ground_truth": "male and female",
+        "report_name": "Waldron_2015",
+        "slide_number": 18,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2015_9",
+        "question": "What is the objective when it comes to adverse drug events?",
+        "ground_truth": "Predict adverse drug events before they happen",
+        "report_name": "Waldron_2015",
+        "slide_number": 19,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2015_10",
+        "question": "Is there more missing data of race variables in prostate cancer when using TCGA’s own merging or after their own merging?",
+        "ground_truth": "There is more missing data when using TCGA’s own merging",
+        "report_name": "Waldron_2015",
+        "slide_number": 25,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "Waldron_2015_11",
+        "question": "What is the number of Asians with prostate cancer when using TCGA's own merging?",
+        "ground_truth": "2",
+        "report_name": "Waldron_2015",
+        "slide_number": 25,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "Waldron_2015_12",
+        "question": "What is the number of white people having prostate cancer after their own merging?",
+        "ground_truth": "411",
+        "report_name": "Waldron_2015",
+        "slide_number": 25,
+        "layout_element": "plot"
+    },
+    {
+        "question_id": "Waldron_2015_13",
+        "question": "What is the total number of people represented in the Table demographic characteristics of common cancers in TCGA?",
+        "ground_truth": "5729",
+        "report_name": "Waldron_2015",
+        "slide_number": 26,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2018_1",
+        "question": "Who is the author of this presentation?",
+        "ground_truth": "Levi Waldron",
+        "report_name": "Waldron_2018",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2018_2",
+        "question": "Does it need same or different data for robust results?",
+        "ground_truth": "same data",
+        "report_name": "Waldron_2018",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2018_3",
+        "question": "What kind of data and code is needed for prooducing generalizable results?",
+        "ground_truth": "different data & different code",
+        "report_name": "Waldron_2018",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2018_4",
+        "question": "How are the results when you have same data and same code?",
+        "ground_truth": "reproducible",
+        "report_name": "Waldron_2018",
+        "slide_number": 3,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2018_5",
+        "question": "How many cases of ovarian cancer are there each year?",
+        "ground_truth": "22000",
+        "report_name": "Waldron_2018",
+        "slide_number": 6,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2018_6",
+        "question": "Is the 5-year survival rate of all cancers higher or lower than the survival rate of ovarian cancer?",
+        "ground_truth": "higher",
+        "report_name": "Waldron_2018",
+        "slide_number": 6,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2018_7",
+        "question": "Is there training data available for TCGA11?",
+        "ground_truth": "yes",
+        "report_name": "Waldron_2018",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2018_8",
+        "question": "For which models is no validation data available?",
+        "ground_truth": "Crijns09 & Sabatier11",
+        "report_name": "Waldron_2018",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2018_9",
+        "question": "For how many models is every reproducibility criteria available/provided?",
+        "ground_truth": "4",
+        "report_name": "Waldron_2018",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Waldron_2018_10",
+        "question": "Which model has the highest C-Index in the summary validation statistics?",
+        "ground_truth": "TCGA11",
+        "report_name": "Waldron_2018",
+        "slide_number": 11,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2018_11",
+        "question": "What do the Histograms mentioned in the report show?",
+        "ground_truth": "F-statistic for ANOVA between expression and batch for each gene",
+        "report_name": "Waldron_2018",
+        "slide_number": 13,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2018_12",
+        "question": "What are the functions in the constructors category of the MultiAssayExperiment API?",
+        "ground_truth": "MultoAssayExperiment & ExperimentList",
+        "report_name": "Waldron_2018",
+        "slide_number": 34,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2023_1",
+        "question": "From when is this report?",
+        "ground_truth": "June 26, 2023",
+        "report_name": "Waldron_2023",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2023_2",
+        "question": "What are the two basic approaches to simplify a complex disease?",
+        "ground_truth": "Unsupervised classification & Supervised classification",
+        "report_name": "Waldron_2023",
+        "slide_number": 3,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2023_3",
+        "question": "What are the steps in the new approach to identify replicated patterns of continuous variation?",
+        "ground_truth": "Identification of recurrent continuous variation patterns, validation & assignment of continuous scores for all patient samples",
+        "report_name": "Waldron_2023",
+        "slide_number": 9,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2023_4",
+        "question": "What is the headline of the article of Khaliq et al. about genome bioligy?",
+        "ground_truth": "Refining colorectal cancer classification and clinical stratification through a single-cell atlas",
+        "report_name": "Waldron_2023",
+        "slide_number": 12,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2023_5",
+        "question": "What is clustering?",
+        "ground_truth": "grouping similar observations together in a training dataset",
+        "report_name": "Waldron_2023",
+        "slide_number": 15,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Waldron_2023_6",
+        "question": "What does the intrinsic hypothesis say Tumor consists of?",
+        "ground_truth": "Tumor consists of cells of ambiguous szbtype",
+        "report_name": "Waldron_2023",
+        "slide_number": 22,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Waldron_2023_7",
+        "question": "What does the records information of BugSigDB include?",
+        "ground_truth": "Study design, Bioinformatic and statistical analysis, Diversity measures, Differentially abundant taxa",
+        "report_name": "Waldron_2023",
+        "slide_number": 33,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_1",
+        "question": "Who are the authors and what are their job titles?",
+        "ground_truth": "Wai Man Hui - Microsoft Cloud Solution Architect, Kinfey Lo - Microsoft Senior Cloud Advocate & Chris Wan - Microsoft MVP & Microsoft MCT",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Multimodel_Azure_2",
+        "question": "What is the slogan on the commercial poster for Copilot?",
+        "ground_truth": "Unlimited Voice and Think Deeper for Free",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 3,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Multimodel_Azure_3",
+        "question": "What customizable AI Models are there?",
+        "ground_truth": "Speech. Vision, Language & Azure OpenAI Service",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 7,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_4",
+        "question": "What scenario-based services are there?",
+        "ground_truth": "AI Search, AI Document Intelligence, Video Indexer & AI Content Understanding",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 8,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_5",
+        "question": "Which Azure AI service is presented as a preview only?",
+        "ground_truth": "AI Content Understanding",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 8,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_6",
+        "question": "What are the Azure AI Content Understanding Capabilities?",
+        "ground_truth": "Multimodal data ingestion, Information extraction schema & Grounding and confidence scores",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 11,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_7",
+        "question": "What can be input for content understanding?",
+        "ground_truth": "Documents, Image, Video, Audio & Text",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 14,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_8",
+        "question": "What does Multi-Agent-Custom Automation Engine allow users to do?",
+        "ground_truth": "Allows users to use many AI passes to get complex work done quickly by combining Azure AI foundry and Autogen",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 23,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Multimodel_Azure_9",
+        "question": "What are the technical key features of the Multi-Agent-Custom Automation Engine?",
+        "ground_truth": "One place to Chat, Dynamically recruit for different tasks, Modular development & Organize your agent team Agents",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 23,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Multimodel_Azure_10",
+        "question": "What languages are new to the Phi Family?",
+        "ground_truth": "Phi-4-14B, Phi-4-mini-3.8B & Phi-4-multimodal-5.6B",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 29,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Multimodel_Azure_11",
+        "question": "Where will the Global AI Bootcamp 2025 take place?",
+        "ground_truth": "Hong Kong",
+        "report_name": "Multimodel_Azure",
+        "slide_number": 45,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Learn_Azure_1",
+        "question": "What are the parts of windows copilot runtime?",
+        "ground_truth": "applications + experience, windows copilot library + on-device models & ai frameworks + toolchain",
+        "report_name": "Learn_Azure",
+        "slide_number": 3,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Learn_Azure_2",
+        "question": "Which execution provider is by Intel?",
+        "ground_truth": "OpenVino",
+        "report_name": "Learn_Azure",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Learn_Azure_3",
+        "question": "From which company is QNN?",
+        "ground_truth": "Qualcomm",
+        "report_name": "Learn_Azure",
+        "slide_number": 4,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Learn_Azure_4",
+        "question": "What are the parts of the device in the graphic to Optimization and performance ONNX runtime",
+        "ground_truth": "CPU, GPU & NPU",
+        "report_name": "Learn_Azure",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Learn_Azure_5",
+        "question": "What prompt is used to compare GPT3.5 with GPT4?",
+        "ground_truth": "Generate a prompt for a hyper realistic portrait of a pirate",
+        "report_name": "Learn_Azure",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Learn_Azure_6",
+        "question": "What are the core elements of Azure AI studio?",
+        "ground_truth": "Unified Platform, Data integration, Hybrid & semantic search, full developement lifecycle, sade & responsible AI",
+        "report_name": "Learn_Azure",
+        "slide_number": 14,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Learn_Azure_7",
+        "question": "What to do if the use case relates to existing microsoft applications?",
+        "ground_truth": "Check copilot scenario library",
+        "report_name": "Learn_Azure",
+        "slide_number": 16,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "Learn_Azure_8",
+        "question": "What should customers consider, if they expect exact same answer is returned every time for the same question?",
+        "ground_truth": "Other AI services like custom question answering. Or you can try this preview feature of AOAI",
+        "report_name": "Learn_Azure",
+        "slide_number": 17,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Learn_Azure_9",
+        "question": "What are the 3 Pillars?",
+        "ground_truth": "Logging, evaluation & monitoring",
+        "report_name": "Learn_Azure",
+        "slide_number": 18,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Learn_Azure_10",
+        "question": "What is the first step of experience sharing?",
+        "ground_truth": "Drive test cases from requirement spec. (eg. 10 requirements)",
+        "report_name": "Learn_Azure",
+        "slide_number": 19,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Learn_Azure_11",
+        "question": "What to do first when ideating/exploring?",
+        "ground_truth": "Identify business use case",
+        "report_name": "Learn_Azure",
+        "slide_number": 20,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Learn_Azure_12",
+        "question": "What is the description of coherence?",
+        "ground_truth": "Measures the quality of all sentences in a model's predicted answer and how they fit together naturally",
+        "report_name": "Learn_Azure",
+        "slide_number": 23,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Learn_Azure_13",
+        "question": "When to use fluency?",
+        "ground_truth": "You would like to assess the grammatical and linguistic accuracy of the generative AI's predicted answers.",
+        "report_name": "Learn_Azure",
+        "slide_number": 23,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Learn_Azure_14",
+        "question": "What are the VECTOR-BASED RAG Features?",
+        "ground_truth": "Similarity, content relevance. reasonable & accuracy",
+        "report_name": "Learn_Azure",
+        "slide_number": 44,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Learn_Azure_15",
+        "question": "What options are there to chat with your data?",
+        "ground_truth": "SVECTOR-BASED RAG & GRAPH RAG",
+        "report_name": "Learn_Azure",
+        "slide_number": 46,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Microsoft_Reactor_1",
+        "question": "Who are the authors of this report?",
+        "ground_truth": "Wai Man Hui & Kenneth Kwan",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Microsoft_Reactor_2",
+        "question": "Which Industries does AI reinvent?",
+        "ground_truth": "HR, Supply Chain, R&D, Product Developement, Admin and Support, Legal, Marketing, IT, Customer Service, Environment, Health & Safety",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 3,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Microsoft_Reactor_3",
+        "question": "Which parts are there in the journey for AI adoption?",
+        "ground_truth": "AI strategie, AP plam, AI ready, govern AI, Manage AI & secure AI",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Microsoft_Reactor_4",
+        "question": "What does a custom copilot for enterprise applications perform?",
+        "ground_truth": "Search/summarize data through a chat UI and/or Task completion within the enterprise app using private or public data.",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 9,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Microsoft_Reactor_5",
+        "question": "What does PTU mean?",
+        "ground_truth": "Provisioned throughput units ",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 15,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Microsoft_Reactor_6",
+        "question": "What are benefits of PTU?",
+        "ground_truth": "Assigned latency per token, Predictable TPM* throughput, Choice in handling traffic, Reserved capacity",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 15,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "Microsoft_Reactor_7",
+        "question": "Which PTU offer provides real -time scoring for large consisten volume?",
+        "ground_truth": "the provisioned version",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 16,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Microsoft_Reactor_8",
+        "question": "What offer types are there in the Azure OpenAI Service offering?",
+        "ground_truth": "Standard (PayGo), Batch & Provisioned (PTUs)",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 19,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "Microsoft_Reactor_9",
+        "question": "How much does provisioned Global cost before November 1, 2024 per hour?",
+        "ground_truth": "$2.00 per hour",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 20,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "Microsoft_Reactor_10",
+        "question": "Which deployment option is cheapest after November 1, 2024 per hour?",
+        "ground_truth": "Provisioned Global",
+        "report_name": "Microsoft_Reactor",
+        "slide_number": 20,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_1",
+        "question": "For how long is the presentation planned",
+        "ground_truth": "40 - 45 minutes",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 1,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_2",
+        "question": "For what audience is the presentation?",
+        "ground_truth": "Solution Architects, Business Decision Makers, Developers",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 1,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_3",
+        "question": "Why sould content creators write 3 things an attendee should take away from the presentation?",
+        "ground_truth": "This will help presenters home in on the main points",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 2,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_4",
+        "question": "What three components of security are there for the End-to-end security with Azure IoT?",
+        "ground_truth": "Device Security, Connection Security, Cloud Security",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 7,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_5",
+        "question": "What are Edge and cloud in the Azure IoT Reference Architecture?",
+        "ground_truth": "Edge: Where IoT devices exist to gather and produce telemetry, Cloud: Where data is delivered and processed",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 10,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_6",
+        "question": "For what environments is Azure IoT Edge Protocol Translation Pattern ideal?",
+        "ground_truth": "For environments with Existing sensor protocols (BLE, BACnet, Modbus, OPC-US, Proprietary) & Legacy sensors and/or devices which do not support MQTT, AMQP, or HTTP",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 12,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_7",
+        "question": "What examples for cross-industry relevance of IoT are mentioned?",
+        "ground_truth": "Return to Office (Detection and Prevention), Fleet management and Connected cars, Smart Cities, Real-time patient monitoring, anomaly detection in factories & Real time demand and inventory management",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 17,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_9",
+        "question": "Where can NVIDIA DeepStream SDK be purchased?",
+        "ground_truth": "Azure Marketplace",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 29,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "IoT_ELP_Module5(MP)_10",
+        "question": "What animal is on the cover of Project 15 from Microsoft?",
+        "ground_truth": "An elephant",
+        "report_name": "IoT_ELP_Module5(MP)",
+        "slide_number": 33,
+        "layout_element": "image"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_1",
+        "question": "Who is the author of this presentation?",
+        "ground_truth": "Christopher Maneu",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 1,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_2",
+        "question": "For whom is this session for?",
+        "ground_truth": "Data Scientist, Data Engineer & IoT Engineer",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 4,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_3",
+        "question": "What is the customer in the example for Metadata?",
+        "ground_truth": "ContosoCity",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 7,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_4",
+        "question": "What kinds of IoT Data are described in the nature od IoT Data?",
+        "ground_truth": "JSON Documents, Metadata & unstructured bin",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 7,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_5",
+        "question": "What are operational databases built for?",
+        "ground_truth": "For writes and micro-reads.",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 8,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_6",
+        "question": "What is the Status for the OrderId 5661?",
+        "ground_truth": "Delivered",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 9,
+        "layout_element": "table"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_7",
+        "question": "What is used to move data vrom operational databases to data warehouse?",
+        "ground_truth": "ETL (Extract Transform Load)",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 10,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_8",
+        "question": "By which 3 factors is Big Data characterised?",
+        "ground_truth": "Volume, Variety & Velocity",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 11,
+        "layout_element": "diagram"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_9",
+        "question": "What is the main limit of traditional data warehouse?",
+        "ground_truth": "They cannot scale to the actual scale requirements.",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 14,
+        "layout_element": "text"
+    },
+    {
+        "question_id": "IoT_ELP_Module4(MP)_10",
+        "question": "What are the differences between a data warehouse and a big data system?",
+        "ground_truth": "ETL versus ELT & Structured versus Unstructured.",
+        "report_name": "IoT_ELP_Module4(MP)",
+        "slide_number": 16,
+        "layout_element": "text"
+    }
+]

@@ -1,0 +1,701 @@
+---
+title: "Meet Your New Client: Writing Reports for AI – Benchmarking Information Loss in Market Research Deliverables"
+code-repo: "Access the code and data at <https://github.com/psimm/meet-your-new-client>"
+author:
+    - name: Paul F. Simmering
+      email: paul@simmering.dev
+      affiliations:
+        - ref: qagentur
+      attributes:
+        corresponding: true
+    - name: Benedikt Schulz
+      email: benedikt.ps@gmail.com
+      affiliations:
+        - ref: qagentur
+    - name: Oliver Tabino
+      email: oliver.tabino@teamq.de
+      affiliations:
+        - ref: qagentur
+    - name: Dr. Georg Wittenburg
+      email: georg.wittenburg@inspirient.com
+      affiliations:
+        - ref: inspirient 
+affiliations:
+  - id: inspirient
+    name: Inspirient GmbH
+  - id: qagentur
+    name: Q Agentur für Forschung GmbH
+date: "2025-08-13"
+bibliography: bibliography.bib
+execute: 
+  echo: false
+pdf-engine: pdflatex
+format:
+  hikmah-pdf:
+    keep-tex: true
+    date-format: iso
+    number-sections: true
+    toc: false
+    colorlinks: true
+    tbl-cap-location: bottom
+  hikmah-manuscript-pdf: default
+abstract: |
+  As organizations adopt retrieval-augmented generation (RAG) for their knowledge management systems (KMS), traditional market research deliverables face new functional demands. While PDF reports and slides have long served human readers, they are now also "read" by AI systems to answer user questions. To future-proof reports being delivered today, this study evaluates information loss during their ingestion into RAG systems. It compares how well PDF and PowerPoint (PPTX) documents converted to Markdown can be used by an LLM to answer factual questions in an end-to-end benchmark. Findings show that while text is reliably extracted, significant information is lost from complex objects like charts and diagrams. This suggests a need for specialized, AI-native deliverables to ensure research insights are not lost in translation.
+thanks: |
+  We would like to thank the participants of the AI Forum of the German Society for Online Research (DGOF) for the discussion about knowledge management that inspired this study. We are also grateful for helpful comments by participants at the General Online Research 2025 conference. Paul Simmering acknowledges inference credits granted by Fireworks AI and compute credits granted by Modal.
+keywords: 
+  - retrieval-augmented generation
+  - knowledge management
+  - market research
+  - large language models
+---
+
+## Introduction
+
+```{python}
+from pptx import Presentation
+from pyprojroot import here
+import polars as pl
+
+# Set file paths
+reports_dir = here("data/reports")
+questions_file = here("data/questions/questions.json")
+results_dir = here("multirun/2025-07-29_15-15-04")
+
+# Verify that the files exist
+assert reports_dir.exists(), f"Reports directory not found: {reports_dir}"
+assert results_dir.exists(), f"Results directory not found: {results_dir}"
+assert questions_file.exists(), f"Questions file not found: {questions_file}"
+```
+
+```{python}
+# Variables for styling
+# Colors: Okabe-Ito colorblind safe qualitative scale
+colors = [
+    "#56B4E9",
+    "#009E73",
+    "#E69F00",
+    "#0072B2",
+    "#D55E00",
+    "#CC79A7",
+    "#F0E442",
+    "#000000",
+]
+
+color_map = {"pptx": colors[0], "pdf": colors[1], "png": colors[2]}
+
+# Fonts
+font_family = "cmss10"
+base_font_size = 16
+title_font_size = 20
+
+# Layout elements
+layout_element_name_map = {
+    "text": "Text",
+    "table": "Table",
+    "diagram": "Diagram",
+    "plot": "Data Chart",
+    "image": "Image",
+}
+layout_element_order = list(layout_element_name_map.values())
+
+# Model names
+model_name_map = {
+    "llama4-maverick-instruct-basic": "Llama4 Maverick",
+    "qwen2p5-vl-32b-instruct": "Qwen2.5 32B",
+    "gpt-4.1-mini-2025-04-14": "GPT 4.1 Mini",
+}
+model_order = list(model_name_map.values())
+
+# Library names
+library_name_map = {
+    "docling": "Docling",
+    "markitdown": "Markitdown",
+    "marker": "Marker",
+    "zerox": "Zerox OCR",
+}
+library_order = list(library_name_map.values())
+```
+
+```{python}
+# Get a list of all the reports, in PPTX format
+reports = list(reports_dir.glob("*.pptx"))
+
+report_data = []
+# Read each report using python-pptx and get the number of slides
+for report in reports:
+    presentation = Presentation(report)
+    report_data.append({"report_path": str(report), "slides": len(presentation.slides)})
+
+# Create a Polars DataFrame
+reports_df = pl.DataFrame(report_data).with_columns(
+    report_name=pl.col("report_path")
+    .str.replace(str(reports_dir) + "/", "")
+    .str.replace(".pptx", ""),
+)
+
+# Load the questions and join them to the report data
+questions_df = pl.read_json(questions_file)
+
+questions_agg = questions_df.group_by("report_name").agg(questions=pl.len())
+
+questions_agg_by_type = (
+    questions_df.group_by(["report_name", "layout_element"])
+    .agg(questions=pl.len())
+    .pivot(
+        index="report_name",
+        on="layout_element",
+        values="questions",
+    )
+    .fill_null(0)
+)
+
+reports_df_with_questions = (
+    reports_df.join(questions_agg, on="report_name", how="left", validate="1:1")
+    .join(questions_agg_by_type, on="report_name", how="left", validate="1:1")
+    .sort("slides", descending=True)
+    .with_columns(
+        (pl.col("questions") / pl.col("slides")).alias("questions_per_slide"),
+    )
+    .select(
+        pl.col("report_name"),
+        pl.col("slides"),
+        pl.col("questions"),
+        pl.col("questions_per_slide"),
+        pl.col("text").alias("text_questions"),
+        pl.col("table").alias("table_questions"),
+        pl.col("diagram").alias("diagram_questions"),
+        pl.col("image").alias("image_questions"),
+        pl.col("plot").alias("data_chart_questions"),
+    )
+)
+
+assert sum(reports_df_with_questions.null_count()).item() == 0
+
+total_questions = reports_df_with_questions["questions"].sum()
+total_reports = len(reports_df_with_questions)
+
+avg_slides = round(reports_df_with_questions["slides"].mean(), 1)
+max_slides = reports_df_with_questions["slides"].max()
+min_slides = reports_df_with_questions["slides"].min()
+avg_questions_per_document = round(total_questions / total_reports, 1)
+
+question_slide_min = questions_df["slide_number"].min()
+question_slide_max = questions_df["slide_number"].max()
+questions_slide_avg = round(questions_df["slide_number"].mean(), 1)
+```
+
+
+```{python}
+import sys
+from itertools import product
+
+import polars as pl
+from pyprojroot import here
+
+# Add project root to path
+sys.path.insert(0, str(here()))
+
+from src.utils import RunConfig
+
+# Load data from a specific multirun directory
+# All job subdirectories must have both evaluated_answers.json and .hydra/config.yaml
+# Any missing or incomplete runs will raise an error
+
+# Get all subdirectories (job directories)
+job_dirs = [d for d in results_dir.iterdir() if d.is_dir()]
+assert job_dirs, f"No job directories found in multirun directory: {results_dir}"
+
+# Verify all runs are complete and collect paths
+runs = []
+missing_files = []
+
+dfs = []
+for job_dir in job_dirs:
+    evaluated_answers_path = job_dir / "evaluated_answers.json"
+    hydra_path = job_dir / ".hydra"
+    config_path = hydra_path / "config.yaml"
+
+    if not evaluated_answers_path.exists():
+        print(f"Skipping {job_dir} because it is missing evaluated_answers.json")
+        continue
+
+    assert hydra_path.exists(), f"Missing .hydra directory in {job_dir}"
+    assert config_path.exists(), f"Missing config.yaml in {job_dir}/.hydra/"
+
+    try:
+        config = RunConfig.from_yaml(config_path)
+    except Exception as e:
+        raise RuntimeError(f"Error loading config from {config_path}: {e}")
+
+    try:
+        run_df = pl.read_json(
+            evaluated_answers_path, infer_schema_length=100000
+        ).with_columns(
+            answer_model=pl.lit(config.answer.model),
+            vision_model=pl.lit(config.convert.model),
+            lib=pl.lit(config.convert.lib),
+            run_path=pl.lit(str(hydra_path)),
+            job_dir=pl.lit(str(job_dir)),
+        )
+        dfs.append(run_df)
+    except Exception as e:
+        raise RuntimeError(f"Error loading data from {evaluated_answers_path}: {e}")
+
+raw = pl.concat(dfs, rechunk=True)
+```
+
+```{python}
+# Clean the layout elements
+cleaned = (
+    raw.explode("report_answers")
+    .with_columns(
+        pl.col("report_answers")
+        .struct.field("evaluation")
+        .struct.field("correct")
+        .alias("correct"),
+        pl.col("report_answers")
+        .struct.field("conversion_error")
+        .alias("conversion_error"),
+        pl.col("answer_model").replace(model_name_map),
+        pl.col("vision_model").replace(model_name_map),
+        pl.col("layout_element").replace(layout_element_name_map),
+        pl.col("report_answers")
+        .struct.field("report_filename")
+        .str.extract(r"_from_(.+)\.md")
+        .replace("image", "png")
+        .alias("file_type"),
+        pl.col("lib").replace(library_name_map),
+    )
+    .filter(~pl.col("file_type").eq("combined"))
+)
+
+```
+
+As organizations implement retrieval-augmented generation (RAG) in knowledge management systems (KMS), the audience for market research deliverables is shifting. Reports in PDF and PowerPoint (PPTX) formats, once designed for human readers, are now also consumed by AI systems. For consultancies and market research agencies, this means that effective packaging of results for AI readability is becoming a core requirement. Information loss during document ingestion can undermine downstream retrieval and generation, making the choice of format and structure critical for future-proofing deliverables.
+
+Recent surveys and case studies (e.g., @cheng2025surveyknowledgeorientedretrievalaugmentedgeneration, @gao2024retrievalaugmentedgenerationlargelanguage, @PwC2024CaseStudy) highlight the growing adoption of RAG and the importance of document structure for effective AI use. However, standard delivery formats may not be optimal for machine processing, especially when information is embedded in and/or implied via complex layouts or images.
+
+This study quantifies the information loss that occurs when documents are converted to Markdown for RAG. We systematically compare how well documents in PDF and PPTX formats can be used by large language models to answer factual questions. Our end-to-end evaluation uses four open-source Markdown conversion libraries (Docling, Marker, Markitdown, Zerox OCR) and three vision and question answering models. We introduce a new QA benchmark and corpus of `{python} total_reports` PPTX documents, expanding on prior work focused on PDFs. Our findings inform both practitioners and researchers on the limitations of current formats and tools and provide concrete guidance for agencies seeking to deliver AI-ready reports.
+
+## Related work
+
+Research on the topic comes from two directions: (1) document layout analysis benchmarks for the accuracy of document segmentation and conversion, and (2) question-answering benchmarks that evaluate the accuracy of an answer generation model. As an end-to-end benchmark, this study bridges the gap between the two.
+
+### Document layout analysis (DLA) benchmarks
+
+DLA benchmarks focus on the accuracy of document segmentation using image models. DocLayNet by @pfitzmann2022doclaynet is the largest benchmark for PDF layout segmentation, featuring 11 layout elements, including text, tables, and pictures, across 80863 manually annotated pages. Later, @chengM6DocLargeScaleMultiFormat2023 added M^6^Doc, which includes scanned documents, 74 fine-grained layout elements, and a large Chinese corpus.
+
+OmniDocBench by @ouyangOmniDocBenchBenchmarkingDiverse2025 introduced PDF slides as a document type, relevant to our study. Going beyond DLA, it evaluates tools like MinerU, Marker, Mathpix, and VLMs by comparing their Markdown output to ground truth. Images are removed in pre-processing. Pipeline tools and VLMs performed comparably, with MinerU excelling on English and Qwen2-VL-72B by Alibaba on Chinese. Qwen2-VL-72B also performed best on the JSON extraction OCR benchmark by @omni-benchmarking-ocr-2025.
+
+Specialized benchmarks for specific layout elements include PlotQA by @methani2020plotqa and ChartQA by @masry2022chartqabenchmarkquestionanswering for chart understanding, HybridQA by @chen-etal-2020-hybridqa for table-based QA, and PubTables-1M by @smock2022pubtables for table extraction from scientific papers.
+
+### Question-answering (QA) benchmarks
+
+Question-answering benchmarks evaluate how reliably models can produce correct answers from document-derived evidence. Comprehensive surveys map this space and its task formulations [@cambazoglu2021review; @wang2022modernquestionansweringdatasets; @Rogers_2023]. In the taxonomy of @Rogers_2023, the present study falls under probing questions with free-form answers over expert materials in a monolingual (English) setting. It also works directly with realistic unstructured documents, rather than starting from cleaned text-only representations in classic benchmarks such as HotpotQA [@hotpotqa2018].
+
+FinanceBench [@islam2023financebenchnewbenchmarkfinancial] is closest in spirit among end-to-end evaluations over real documents. It targets financial filings and reports. The benchmark is limited to text and tabular layout elements, starting from PDFs that are converted to text using PyMuPDF and Langchain, without image extraction. A key finding is that a long-context approach, where the full document text is provided to the model, outperforms vector-store variants. Their best configuration (long context with GPT‑4 Turbo) reaches 79% accuracy. FinanceBench further reports that placing relevant context before the question improves performance. These observations motivate our own use of a long-context setting and prompt.
+
+The UDA benchmark [@hui2024udabenchmarksuiteretrieval] advances realism by operating on raw PDFs and HTML rather than pre-cleaned text, aggregating diverse datasets and question types. It concentrates on text and tables and compares several extraction and parsing strategies. Notably, a VLM–based table parsing approach outperforms classic extraction, and a sequential “parse first, then answer” pipeline can surpass direct image-questioning. UDA also contrasts long-context with retrieval pipelines, reporting broadly similar performance on knowledge tasks but and advantage for RAG on numerical reasoning. While UDA omits data charts, diagrams, and images as layout elements, its approach and focus on real-world usefulness motivate our study.
+
+Building on these lines of work, we extend end-to-end QA to PPTX and to diagrams, data charts, and images. We foreground the conversion step, comparing four Markdown conversion libraries, and quantify how format (PDF vs PPTX) and layout affect QA accuracy. The emphasis is practical: guidance for market research teams on format and layout choices that preserve answerable content in KMS.
+
+## Benchmark
+
+### Overview
+
+@fig-overview illustrates the experiment setup. It consists of `{python} total_questions` questions relating to `{python} total_reports` PPTX documents. Each document is manually converted into PDF format using PowerPoint. Then, the PPTX and PDF versions of the documents are each converted to Markdown via conversion libraries (see @sec-conversion-libraries). This results in two Markdown files per original document. These form the knowledge base for the question answering task. A language model is prompted with each question and given the corresponding document's full Markdown text as context. Finally, the answers are compared to the human-annotated ground truth by an LLM as a judge.
+
+![Experiment setup diagram.](images/overview_color.png){#fig-overview}
+
+### File formats
+
+A key difference between the file formats lies in their structure. @livathinos2025doclingefficientopensourcetoolkit categorize the formats into low-level formats (PDF and PNG) and markup-based formats (PPTX).
+
+- **PPTX** is a semantic, XML-based format that stores objects like text and tables in a structured hierarchy. In theory, this structure is highly amenable to machine processing. Images are an exception and require a VLM to be captioned.
+- **PDF** is a visual format describing page layout, not semantic content. Reconstructing the document's structure from low-level drawing instructions is complex and prone to information loss.
+
+Each step involving a VLM or other stochastic model carries a risk of information loss or hallucination. Based on the differences in structure, a starting hypothesis is that PPTX files will be converted to Markdown with less information loss than PDF files.
+
+### Collection of documents
+
+The PPTX documents were sourced from publicly accessible web sources and additional documents were supplied by Q Agentur für Forschung, a market research agency. The majority of the files were found in GitHub repositories. These were found via the GitHub API and then manually inspected. Only English documents that contain information across at least three different layout elements were included. Document length ranges from `{python} min_slides` to `{python} max_slides` slides, with an average of `{python} avg_slides` slides per document.
+
+In regard to content, the documents are market research reports, conference presentations and lecture slides. They cover a range of topics, from cosmetics trends to political science. Due to the nature of GitHub as a source, computer science is the most common topic. A complete list of the documents, including their sources and licenses, is available in the GitHub repository.
+
+### Question formulation
+
+Each item in the benchmark is a triplet ($D$, $q$, $a$), where $D$ is a PPTX document in its original format, $q$ is the question answerable using information in $D$, and $a$ is the ground truth answer to the question. This mirrors the format of UDA benchmarks [@hui2024udabenchmarksuiteretrieval]. A total of `{python} total_questions` such questions were formulated across the `{python} total_reports` documents, amounting to an average of `{python} avg_questions_per_document` questions per document. 
+
+The content that questions relate to is distributed across the slides. Some relate to the first slide, others up to slide `{python} question_slide_max`. The average content position is at `{python} questions_slide_avg` slides.
+
+The questions were manually formulated by two of the authors. When formulating the questions, care was taken to ensure that they could be answered unambiguously. To isolate the impact of different formats, each question was designed to be answerable using information from a single slide and a single layout element. However, information can be present in multiple forms in the same document. For example, a text box can repeat information that is also present in a data chart or a table. When asked a question about the report, the model could use either layout element or a combination to find the answer. It may also infer the correct answer from the surrounding text. As @Rogers_2023 note "we need to reconsider the idea that whether or not a given reasoning skill is 'required' is a characteristic of a given question. It is rather a characteristic of the combination of that question and the entire dataset". In some instances, text boxes serve as axis labels for a data chart, requiring the model to understand the relationship between the chart and the text.
+
+### Layout elements
+
+Questions pertain to information presented in different layout elements. We distinguish between five layout elements found in PowerPoint files, shown in @fig-data-types.
+
+- **Text**: Information within a single, contiguous text field.
+- **Image**: Visual elements, including photographs and screenshots of other layout elements such as a table saved as an image.
+- **Table**: Structured data arranged in rows and columns.
+- **Diagram**: Combinations of text and graphical elements, such as flow charts.
+- **Data Chart**: Graphical representations of numeric data, such as bar or line charts. Only native PowerPoint charts are included; charts inserted as images are classified as *Image*.
+
+Other data in PowerPoint, such as videos and speaker notes, are outside of the scope of this study.
+
+To avoid an outsized impact from a single unusually easy or difficult object on the result, a maximum of three questions were asked regarding one layout element, for example a diagram on a particular slide.
+
+![Example slides, questions and answers for the five layout elements.](images/layout_elements.png){#fig-data-types width=100% fig-align="center"}
+
+### Document conversion libraries {#sec-conversion-libraries}
+
+A common entry point into a text-based RAG system is to convert documents to Markdown. The plain text format is token-efficient, human-readable, and supports many formatting options. Images are supported as external references with optional captions. LLMs can also generate Markdown themself [@chenMDEvalEvaluatingEnhancing2025], making it useful for summaries and intermediate outputs. The two main conversion paradigms are (1) pipeline-based decomposition using specialized object detection models and (2) end-to-end processing using a vision language model (VLM).
+
+@tbl-conversion-libraries gives an overview of open-source libraries to convert PDF and PPTX to Markdown. In addition, there are proprietary solutions like LlamaParse and Mathpix. The pipeline library [unstructured](https://github.com/Unstructured-IO/unstructured) is omitted as it does not support export to Markdown at the time of writing. PyMuPDF and pypdf are included because they are used in related benchmarks, however, they do not support PPTX conversion. MinerU does not support PPTX files, but the wrapper library magic-doc does. However, the version of MinerU supported by magic-doc lags behind the current version of MinerU.
+
+| Library | Developer | Paradigm | PDF | PPTX | License |
+|-----|------|---|--|--|-----|
+| [Docling](https://github.com/docling-project/docling) | IBM | Pipeline | Yes | Yes | MIT |
+| [GPTPDF](https://github.com/CosmosShadow/gptpdf) | Chen Li | VLM | Yes | No | MIT |
+| [PyMuPDF](https://github.com/pymupdf/PyMuPDF) | Artifex Software | Pipeline | Yes | No | AGPL-3 |
+| [pypdf](https://github.com/py-pdf/pypdf) | Martin Thoma | Pipeline | Yes | No | BSD-3 | 
+| [Marker](https://github.com/VikParuchuri/marker) | Datalab | Pipeline | Yes | Yes* | GPL-3** |
+| [Markitdown](https://github.com/microsoft/markitdown) | Microsoft | Pipeline | Yes | Yes | MIT |
+| [MinerU](https://github.com/opendatalab/MinerU) | OpenDataLab | Pipeline | Yes | No | AGPL-3 |
+| [Zerox OCR](https://github.com/getomni-ai/zerox) | OmniAI | VLM | Yes | Yes* | MIT |
+
+: Comparison of document conversion libraries. *Marker and Zerox OCR convert PPTX to PDF at the start of the conversion. **model weights for Marker are licensed cc-by-nc-sa-4.0. {#tbl-conversion-libraries}
+
+
+
+This study compares the following four libraries that support both PDF and PPTX in their current version:
+
+- *Docling* by @livathinos2025doclingefficientopensourcetoolkit at IBM. Version 2.38.0 was used (released 2025-06-23).
+- *Markitdown* by @markitdown. Version 0.1.2 was used (released 2025-05-28).
+- *Marker* by @marker_github. Version 1.7.5 was used (released 2025-06-11).
+- *Zerox OCR* by @zerox_github. Version 0.1.06 was used (released 2024-12-18).
+
+All libraries were run with support from a VLM to caption images. The captions were placed into the Markdown documents at the location of the images.
+
+### Conversion library limitations {#sec-conversion-library-limitations}
+
+```{python}
+errors_df = (
+    cleaned.filter(pl.col("conversion_error"))
+    .group_by("lib", "file_type")
+    .agg(pl.col("report_name").n_unique().alias("errors"))
+    .sort("errors", descending=True)
+)
+
+marker_pptx_errors = (
+    errors_df.filter(
+        pl.col("lib") == library_name_map["marker"], pl.col("file_type").eq("pptx")
+    )
+    .get_column("errors")
+    .item()
+)
+markitdown_pptx_errors = (
+    errors_df.filter(
+        pl.col("lib") == library_name_map["markitdown"], pl.col("file_type").eq("pptx")
+    )
+    .get_column("errors")
+    .item()
+)
+
+assert (
+    errors_df.get_column("errors").sum() == marker_pptx_errors + markitdown_pptx_errors
+), "Unexpected conversion errors"
+```
+
+
+**Missing image captions**: Docling does not support image captions for images in PPTX files. Some images in PDF files are not captioned. PDF files converted to Markdown by Markitdown exhibit duplicate text and missing image captions. Markitdown does not support image captions for images that are in PDF format when they are embedded in PPTX files.
+
+**Conversion errors**: Marker and the underlying library pillow were unable to handle Windows Metafile (WMF) files, a legacy format encountered in `{python} marker_pptx_errors` benchmarked documents, on the Debian Linux system used for this study. Markitdown had an issue with `{python} markitdown_pptx_errors` PPTX files that contain shapes with `None` as top, left, height or width attributes. These combinations of libraries and documents were excluded from further analysis. 
+
+### Models
+
+The following LLMs are compared as vision models and as question answering models:
+
+- *Llama4 Maverick* by Meta [@llama4_meta_blog], hosted on the Fireworks AI API
+- *Qwen2.5-32B Instruct* by Alibaba [@qwenQwen25TechnicalReport2025], hosted on the Fireworks AI API
+- *gpt-4.1-mini-2025-04-14* by OpenAI [@openai2024gpt4ocard], hosted on the OpenAI API
+
+All of these models have a sufficiently long context length to fit the longest document in Markdown form. Prompts, temperature, and other token generation parameters are kept constant. They are documented in the appendix. 
+
+The LLM-as-judge method [@zheng2023judgingllmasajudgemtbenchchatbot] is employed to evaluate the correctness of the answers. In contrast to word-based evaluations like BLEU, ROUGE, and METEOR, the LLM-as-judge method is able to semantically evaluate the answers. It is not limited to lexical matches. Further, it can be instructed on specific judging criteria. A reasoning model, *o4-mini-2025-04-16*, carries out the judging in a true-false manner. We provide the prompt in the appendix. The nature of the questions leaves little room for interpretation. The sum of correct answers divided by the total number of questions is the accuracy, the primary metric of this study.
+
+```{python}
+total_runs = cleaned.get_column("run_path").n_unique()
+```
+
+### Configurations
+
+The experiment has a factorial design, combining the four libraries, each of the three models as vision model for image captioning and as the question answering model. At the time of writing the Zerox OCR library was not compatible with Llama4 or Qwen2.5 on hosted inference APIs, therefore only gpt-4.1-mini was used with it. When Zerox OCR converts PPTX to Markdown, it starts by converting the PPTX to PDF. This internal conversion is not the subject of this study, so Zerox is only used with PDF files. In total, `{python} total_runs` configurations were tested.
+
+## Results
+
+### Layout elements and file formats
+
+```{python}
+aggregated = (
+    cleaned.filter(~pl.col("conversion_error"))
+    .group_by(
+        "vision_model",
+        "answer_model",
+        "lib",
+        "layout_element",
+        "file_type",
+        "run_path",
+    )
+    .agg(correct=pl.col("correct").sum(), questions=pl.len())
+    .with_columns(
+        acc=pl.col("correct") / pl.col("questions"),
+    )
+    .select(
+        "layout_element",
+        "file_type",
+        "lib",
+        "vision_model",
+        "answer_model",
+        "questions",
+        "acc",
+    )
+    .sort("layout_element", "file_type", "lib")
+)
+```
+
+```{python}
+# | label: fig-acc-by-file-type
+# | fig-cap: "Answer accuracy in percent by file type and layout element. Results are averaged across conversion libraries, question answering model, and vision model. Conversions that resulted in errors are excluded."
+
+from plotnine import *
+
+# Average across all vision models, QA models, and libraries
+main_story_data = (
+    aggregated.filter(pl.col("file_type").is_in(["pdf", "pptx"]))
+    .group_by(["layout_element", "file_type"])
+    .agg(acc=pl.col("acc").mean())
+    .with_columns(
+        pl.col("acc")
+        .map_elements(lambda x: f"{x:.0%}", return_dtype=pl.Utf8)
+        .alias("acc_pct"),
+        pl.col("file_type").str.to_uppercase(),
+        pl.col("layout_element").cast(pl.Enum(layout_element_order)),
+    )
+)
+
+
+# Create the figure
+(
+    ggplot(
+        main_story_data.to_pandas(),
+        aes(x="layout_element", y="acc", fill="file_type"),
+    )
+    + geom_bar(stat="identity", position="dodge")
+    + geom_text(
+        aes(label="acc_pct"),
+        position=position_dodge(width=0.9),
+        va="top",
+        size=base_font_size - 2,
+    )
+    + scale_fill_manual(values={"PDF": color_map["pdf"], "PPTX": color_map["pptx"]})
+    + scale_y_continuous(labels=lambda x: [f"{val:.0%}" for val in x], limits=[0, 1])
+    + labs(
+        x="Layout element",
+        y="Mean accuracy",
+        fill="Original file type",
+    )
+    + theme_minimal()
+    + theme(
+        text=element_text(family=font_family, size=base_font_size),
+        plot_title=element_text(family=font_family, size=title_font_size),
+        axis_title=element_text(family=font_family, size=title_font_size),
+        axis_text=element_text(family=font_family, size=base_font_size),
+        legend_title=element_text(family=font_family, size=base_font_size),
+        legend_text=element_text(family=font_family, size=base_font_size),
+        legend_position="top",
+        panel_grid_major=element_blank(),
+        panel_grid_minor=element_blank(),
+        figure_size=(10, 6.25),
+    )
+)
+```
+
+@fig-acc-by-file-type shows the accuracy by file type and layout element. @tbl-conversion-libraries-acc shows the same results split by conversion library. In order of overall accuracy, the layout elements are:
+
+1. **Text** is accurately converted by all libraries and with both file types, scoring above 90% accuracy. That makes text the most reliable layout element for question answering.
+2. **Tables** are accurately converted in all but one configuration, with most showing accuracy above 90%. The exception is Markitdown on PDF files, which does not convert tables to Markdown tables. Instead, table cells are extracted as text snippets, losing their structural relationships.
+3. **Diagrams** have lower accuracy than text and tables, with all scores below 90%. Zerox OCR achieves 88.5% on PDF files, likely due to its use of box-drawing characters. Markitdown reaches 80.2% on PPTX files. Other libraries and file type combinations score below 80%.
+4. **Data charts** display high variance of accuracy across libraries and file types. Markitdown excels at this task in PPTX files, scoring the highest accuracy of 70.1%. Accuracy in other configurations is low.
+5. **Images** show high accuracy variance. Docling cannot caption images in PPTX files, and Markitdown cannot in PDF files. Docling achieves a comparatively high accuracy of 72.5% on images in PDF files, more than 10 percentage points higher than others using the same vision models. This may be due to its option for a custom image prompt, which is not available in the other libraries. The image prompt is in the appendix.
+
+We do not find support for our hypothesis that PPTX files with their structured XML format are generally better suited for document understanding than PDF files. As an external reference to the statistics reported here, FinanceBench's [@islam2023financebenchnewbenchmarkfinancial] best long-context configuration with GPT4-Turbo reported 79% accuracy on questions pertaining to financial PDF documents.
+
+```{python}
+# | label: tbl-conversion-libraries-acc
+# | tbl-cap: Answer accuracy in percent by conversion library, file type and layout element. Results are averaged across question answering model and vision model.
+# | output: asis
+
+from great_tables import GT
+
+library_comparison = (
+    aggregated.filter(pl.col("file_type").is_in(["pdf", "pptx"]))
+    .with_columns(pl.col("file_type").str.to_uppercase())
+    .group_by(["lib", "file_type", "layout_element"])
+    .agg(acc=pl.col("acc").mean().mul(100).round(1))
+)
+
+# Pivot to get layout elements as columns
+library_pivot = (
+    library_comparison.pivot(
+        index=["lib", "file_type"], on="layout_element", values="acc"
+    )
+    .select(["lib", "file_type"] + layout_element_order)
+    .sort("lib", "file_type")
+    .rename({"lib": "Library", "file_type": "File type"})
+)
+
+gt = GT(library_pivot).tab_spanner(label="Layout element", columns=layout_element_order)
+
+# Convert to LaTeX, see
+# https://posit-dev.github.io/great-tables/reference/GT.as_latex.html#great_tables.GT.as_latex
+gt_latex = gt.as_latex(tbl_pos="!h")
+# Remove automatic font size override added by as_latex
+gt_latex = gt_latex.replace("\\fontsize{12.0pt}{14.4pt}\\selectfont", "")
+# Workaround for a bug in LaTeX conversion of spanner lines
+gt_latex = gt_latex.replace("cmidrule(lr){2-6}", "cmidrule(lr){3-7}")
+print(gt_latex)
+```
+
+### Image captioning and question answering models
+
+The experiment also involved variations in the used for image captioning (or alternatively the whole conversion in the case of Zerox OCR) and for answering questions based on the converted document. @tbl-model-accuracy displays accuracy by combination of models. Out of the three models, GPT 4.1 Mini posts the highest accuracy scores as a vision model. As question answering models, Llama4 Maverick and GPT 4.1 Mini reach similar accuracy. The differences illustrate that every single piece of the pipeline (file type, layout element, vision model, question answering model, conversion library) influences the accuracy.
+
+```{python}
+# | label: tbl-model-accuracy
+# | tbl-cap: Answer accuracy in percent by QA model and VLM. Results are averaged across layout elements, file types, and conversion libraries. Runs with Zerox OCR were excluded, as it is incompatible with Llama4 and Qwen2.5 on hosted inference APIs.
+# | output: asis
+
+from great_tables import style, loc
+
+model_order_present = [m for m in model_order if m in aggregated["answer_model"]]
+
+model_combinations = (
+    aggregated.filter(pl.col("lib") != library_name_map["zerox"])
+    .group_by(["answer_model", "vision_model"])
+    .agg(acc=pl.col("acc").mean().mul(100).round(1))
+    .with_columns(pl.col("answer_model").cast(pl.Enum(model_order_present)))
+)
+
+model_combinations_pivoted = (
+    model_combinations.pivot(index="answer_model", on="vision_model", values="acc")
+    .sort("answer_model")
+    .select(["answer_model"] + model_order_present)
+    .rename({"answer_model": "Question answering model"})
+)
+gt = (
+    GT(model_combinations_pivoted)
+    .tab_spanner(label="Vision language model", columns=model_order_present)
+    .cols_align("left", columns=["Question answering model"])
+)
+gt_latex = gt.as_latex(tbl_pos="!h")
+gt_latex = gt_latex.replace("\\fontsize{12.0pt}{14.4pt}\\selectfont", "")
+print(gt_latex)
+```
+
+## Discussion
+
+Findings indicate that the classic formats PPTX and PDF, while valuable for human interpretation, are not optimal for RAG systems. In some configurations of libraries, files types and layout elements, answer accuracy was below 30%. This is a warning sign for buyers and sellers of reports about market research and other topics. It is in the interest of both parties to ensure that information is passed correctly into a KMS. There are two main paths for this:
+
+1. Coordinate on a file format and layout elements. Ensure that the buyer is using a conversion library that is well equipped for the file format and the layout elements used in the seller’s reports. Adjust the reports as necessary to ensure proper comprehension and work around edge cases.
+2. Negotiate a special-purpose deliverable to be sent alongside the main report. More on this in @sec-special-purpose-deliverables.
+
+A majority of the tested libraries (Docling, Marker, and Zerox OCR) prioritize PDF conversion; only Markitdown emphasizes PPTX and other Microsoft Office formats. This mirrors the relative abundance of PDF files available on the web, relative to PPTX files. With current tools, PPTX is less practical than PDF for conversion, despite its foundation in structured XML.
+
+The tested libraries were not all able to convert each document and layout element therein. We encountered errors as well as silent failures. This reflects the libraries' recency and rapid development. Zerox OCR with its pure vision approach proved to be the most robust. This success mirrors the results of the table extraction experiment by @hui2024udabenchmarksuiteretrieval.
+
+### Special-purpose deliverables {#sec-special-purpose-deliverables}
+
+Instead of working around the limitations of formats made for human consumption, a secondary deliverable optimized for AI could be the solution. Text-heavy reports offer greater compatibility than styled PPTX and PDF files, yet are not optimal either, for example when methodology is presented separately from results. Our study suggests that transitioning to complementary special-purpose deliverables, designed explicitly for AI, enhances the retrieval accuracy of research insights within KMS, and thus for the client. Detailed specification of these special-purpose deliverables is left to future work, but we can already outline relevant design principles:
+
+1. **Text-first representation**: Graphical elements should include comprehensive textual descriptions capturing both explicit content and implicit relationships, including key numbers and trend interpretations.
+2. **Structured architecture**: Implement consistent hierarchical organization with explicit section boundaries. Each section should be self-contained for effective chunking.
+3. **Speaker notes inclusion**: Embed speaker notes and supplementary explanatory content directly within the document to provide context that aids interpretation.
+
+Documents that follow the Web Content Accessibility Guidelines [@wcag22] would be well-suited not just for users with disabilities, but also for KMS.
+
+![An idealized Markdown representation inspired by Zerox OCR. On the left is a PowerPoint slide, on the right the Markdown representation as an AI-readable deliverable. The slide features five layout elements: text, table, diagram, data chart, and image. Each element is also represented in Markdown. The data chart is converted to a table of numbers. The diagram is represented using ASCII characters. The content of the image is described in a caption.](images/special_purpose.png){#fig-special-purpose width=100% fig-align="center"}
+  
+A Markdown version of a document is a candidate for a special-purpose deliverable, given the format's ubiquitous use with LLMs and support from multiple conversion libraries. Markdown is a simple, token-efficient plain-text format that supports formatting options like image captions. The Markdown files produced by Zerox OCR push this format's capabilities by transcribing diagrams into ASCII characters, an approach that achieved the highest accuracy for diagram elements in our benchmark. However, this method has its limitations: the transcription is not standardized and may be inaccurate or infeasible for complex diagrams. Markdown  also generally lacks a structured way to represent the spatial layout of elements, speaker notes, or color-coding from tables and charts. @fig-special-purpose illustrates an idealized output, showing how layout elements from a slide can be represented in Markdown.
+  
+### Further research
+
+Continued development of VLMs, layout models, and pipelines will advance both the pipeline and pure vision approach. We expect that specific feature gaps in pipeline libraries (like Docling's PPTX image captioning) will be closed and bugs fixed.
+
+Further end-to-end benchmarks and case studies with a focus on specific layout elements and file formats are useful in this applied field. They complement the existing QA and DLA benchmarks and provide a comprehensive practitioner's view. Besides the technical side of document understanding, there are organizational, cultural and skill-related aspects to consider in the context of report preparation.
+ 
+## References {.unnumbered}
+
+::: {#refs}
+:::
+
+## Appendix {.unnumbered}
+
+### Settings {.unnumbered}
+
+The LLM calls for conversion and answering use a temperature of 0.0. The judge model does not support a temperature parameter. All other settings were left at their default values.
+
+### Prompts {.unnumbered}
+
+#### Image captioning {.unnumbered}
+
+```
+Describe the image in detail. Extract numbers, text and everything else
+required to answer questions about it. Do not use line breaks or
+other formatting.
+```
+
+This image captioning prompt is only used by Docling.
+
+#### Question answering {.unnumbered}
+
+```
+You are a helpful assistant that answers questions based on provided context.
+
+CONTEXT:
+{report_content}
+
+QUESTION:
+{question}
+
+Answer the question based solely on the provided context.
+If the information isn't available in the context, say
+"I don't have enough information to answer this question."
+```
+
+#### Judging {.unnumbered}
+
+```
+You are the judge for an AI system evaluation.
+
+The AI was asked a question and provided an answer.
+Your task is to check whether the answer matches the ground truth.
+
+Correct answers:
+- Contain all information from the ground truth
+- May contain additional information, as long as it's not contradictory
+
+Incorrect answers:
+- Contradict the ground truth, even in parts
+- Lack key information of the ground truth
+- State that the question can't be answered
+
+QUESTION:
+{question}
+
+GROUND TRUTH:
+{ground_truth}
+
+ANSWER:
+{answer}
+```

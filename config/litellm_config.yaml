@@ -1,0 +1,30 @@
+model_list:
+  - model_name: gpt-4.1-mini-2025-04-14
+    litellm_params:
+      model: gpt-4.1-mini-2025-04-14
+      api_key: os.environ/OPENAI_API_KEY
+  - model_name: o4-mini-2025-04-16
+    litellm_params:
+      model: o4-mini-2025-04-16
+      api_key: os.environ/OPENAI_API_KEY
+  - model_name: qwen2p5-vl-32b-instruct
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/qwen2p5-vl-32b-instruct
+      api_key: os.environ/FIREWORKS_AI_API_KEY
+  - model_name: llama4-maverick-instruct-basic
+    litellm_params:
+      model: fireworks_ai/accounts/fireworks/models/llama4-maverick-instruct-basic
+      api_key: os.environ/FIREWORKS_AI_API_KEY
+
+router_settings:
+  timeout: 300
+
+litellm_settings:
+  num_retries: 5
+  cache: true
+  cache_params:
+    type: s3
+    s3_bucket_name: os.environ/LITELLM_CACHE_BUCKET
+    s3_region_name: os.environ/LITELLM_CACHE_AWS_REGION
+    s3_aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    s3_aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
