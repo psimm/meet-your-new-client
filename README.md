@@ -10,6 +10,8 @@ It sets up a benchmark to evaluate how well different file types and document co
 2. **Question Answering**: For each question, find relevant reports and use LLMs to generate answers based on the report content.
 3. **Evaluation**: Assess the accuracy of answers using an LLM as a judge by comparing against ground truth.
 
+![Overview](paper/images/overview_color.png)
+
 The following steps detail how our experiment can be run. It requires accounts with: AWS, Modal, Fireworks.ai and OpenAI.
 
 ## Reports
