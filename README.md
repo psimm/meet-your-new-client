@@ -2,7 +2,7 @@
 
 This repository holds the code for the paper: Meet Your New Client: Writing Reports for AI - Benchmarking Information Loss in Market Research Deliverables.
 
-The paper is available on arXiv.
+The paper is available on arXiv: <https://arxiv.org/abs/2508.15817>
 
 It sets up a benchmark to evaluate how well different file types and document conversion libraries are suitable to provide a model with context to answer factual questions about market research reports. It's implemented as a pipeline with three steps:
 
